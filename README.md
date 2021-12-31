@@ -1,4 +1,6 @@
 # HardWareProject
 
-This is a test! - tklioupis
-hello - dirousis
+This is a Hardware 1 project
+
+Dimitrios Barmparousis 9775
+Theodoros Lioupis 9733

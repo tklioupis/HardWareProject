@@ -26,6 +26,8 @@ module alu(
     );
 	 
 	reg [31:0] Res;
+	reg ze;
+	assign Zero = ze;
 	assign Out = Res;
 	always @(*)
 	begin 
@@ -52,8 +54,8 @@ module alu(
 			Res = {A[0], A[31:1]};	
 		default: Res = A + B;
 		endcase
+		ze = (Out == 32'd0) ? 1'b1 : 1'b0;
 	end
-	 
 endmodule
 	 
 

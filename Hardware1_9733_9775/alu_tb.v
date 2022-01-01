@@ -64,7 +64,10 @@ module alu_tb;
 		B = 1;
 		Op = 4;
 		#100;
+		{A,B,Op} = {32'h0000000F,32'h0000000A,4'h2}; #100;
+		{A,B,Op} = {32'd11,32'd20,4'h2}; #100;
 		// Wait 100 ns for global reset to finish
+		
        
 		// Add stimulus here
 

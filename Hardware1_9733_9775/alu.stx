@@ -1,14 +1,14 @@
 Release 14.7 - xst P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
-Parameter TMPDIR set to /home/ise/temp/HardWareProject/Hardware1_9733_9775/xst/projnav.tmp
+Parameter TMPDIR set to /home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
 --> 
-Parameter xsthdpdir set to /home/ise/temp/HardWareProject/Hardware1_9733_9775/xst
+Parameter xsthdpdir set to /home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -42,12 +42,12 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/alu.v" into library work
+Analyzing Verilog file "/home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/alu.v" into library work
 Parsing module <alu>.
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.57 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.61 secs
  
 --> 
 

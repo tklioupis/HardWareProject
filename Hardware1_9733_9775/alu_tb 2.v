@@ -41,36 +41,14 @@ module alu_tb;
 		.Out(Out), 
 		.Zero(Zero)
 	);
-
+	
 	initial begin
 		// Initialize Inputs
-		A = 2;
-		B = 1;
-		Op = 0;
-		#100;
-		A = 2;
-		B = 1;
-		Op = 1;
-		#100;
-		A = 2;
-		B = 1;
-		Op = 2;
-		#100;
-		A = 2;
-		B = 1;
-		Op = 3;
-		#100;
-		A = 2;
-		B = 1;
-		Op = 4;
-		#100;
-		{A,B,Op} = {32'h0000000F,32'h0000000A,4'h2}; #100;
-		{A,B,Op} = {32'd11,32'd20,4'h2}; #100;
-		// Wait 100 ns for global reset to finish
 		
-       
-		// Add stimulus here
-
+		//{A,B,Op} = {32'h0000000F,32'h0000000A,4'h2}; #100;
+		{A,B,Op} = {32'd1,32'd2,4'd2}; #100;
+		{A,B,Op} = {32'd11,32'd20,4'd2}; #100;
+		
 	end
       
 endmodule

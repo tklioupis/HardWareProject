@@ -1,5 +1,5 @@
-set -tmpdir "/home/ise/temp/HardWareProject/Hardware1_9733_9775/xst/projnav.tmp"
-set -xsthdpdir "/home/ise/temp/HardWareProject/Hardware1_9733_9775/xst"
+set -tmpdir "/home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/xst"
 run -compileonly yes
 -p xc6slx45t-3-fgg484
 -top alu

@@ -628,6 +628,6 @@ LAB52:    memcpy(t10, t39, 8);
 extern void work_m_06733973125140067056_2725559894_init()
 {
 	static char *pe[] = {(void *)Cont_30_0,(void *)Cont_31_1,(void *)Always_32_2};
-	xsi_register_didat("work_m_06733973125140067056_2725559894", "isim/alu_tb_isim_beh.exe.sim/work/m_06733973125140067056_2725559894.didat");
+	xsi_register_didat("work_m_06733973125140067056_2725559894", "isim/alu_isim_beh.exe.sim/work/m_06733973125140067056_2725559894.didat");
 	xsi_register_executes(pe);
 }

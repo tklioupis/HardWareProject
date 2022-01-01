@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   18:10:00 12/31/2021
+// Create Date:   15:05:50 01/01/2022
 // Design Name:   alu
-// Module Name:   /home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/alu_tb.v
+// Module Name:   /home/ise/Projects/HardWareProject/Hardware1_9733_9775/alu_tb.v
 // Project Name:  Hardware1_9733_9775
 // Target Device:  
 // Tool versions:  
@@ -41,14 +41,15 @@ module alu_tb;
 		.Out(Out), 
 		.Zero(Zero)
 	);
-	
+
 	initial begin
 		// Initialize Inputs
-		
 		//{A,B,Op} = {32'h0000000F,32'h0000000A,4'h2}; #100;
 		{A,B,Op} = {32'd1,32'd2,4'd2}; #100;
 		{A,B,Op} = {32'd11,32'd20,4'd2}; #100;
-		
+        
+		// Add stimulus here
+
 	end
       
 endmodule

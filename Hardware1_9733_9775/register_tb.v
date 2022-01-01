@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   14:46:30 01/01/2022
+// Create Date:   15:00:25 01/01/2022
 // Design Name:   register
-// Module Name:   /home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/register_tb.v
+// Module Name:   /home/ise/Projects/HardWareProject/Hardware1_9733_9775/register_tb.v
 // Project Name:  Hardware1_9733_9775
 // Target Device:  
 // Tool versions:  
@@ -47,9 +47,16 @@ module register_tb;
 		WE = 1;
 		#100;
 		Data = 2;
-		CLK = 1;
+		CLK = 0;
 		WE = 1;
 		#100;
+		Data = 2;
+		CLK = 1;
+		WE = 0;
+		#100;
+
+		// Wait 100 ns for global reset to finish
+		//#100;
         
 		// Add stimulus here
 

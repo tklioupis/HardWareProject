@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-01-01T14:50:52</DateModified>
+  <DateModified>2022-01-01T14:55:57</DateModified>
   <ModuleName>register</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/iseconfig/register.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/Projects/HardWareProject/Hardware1_9733_9775/iseconfig/register.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/Projects/HardWareProject/Hardware1_9733_9775/</ImplementationReportsDirectory>
   <DateInitialized>2022-01-01T14:50:11</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

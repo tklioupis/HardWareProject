@@ -21,9 +21,10 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/register_tb.v";
+static const char *ng0 = "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/register_tb.v";
 static int ng1[] = {1, 0};
 static int ng2[] = {2, 0};
+static int ng3[] = {0, 0};
 
 
 
@@ -65,7 +66,7 @@ LAB5:    xsi_set_current_line(49, ng0);
     t3 = (t0 + 1448);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 4);
     xsi_set_current_line(50, ng0);
-    t2 = ((char*)((ng1)));
+    t2 = ((char*)((ng3)));
     t3 = (t0 + 1608);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(51, ng0);
@@ -78,7 +79,25 @@ LAB5:    xsi_set_current_line(49, ng0);
     *((char **)t1) = &&LAB6;
     goto LAB1;
 
-LAB6:    goto LAB1;
+LAB6:    xsi_set_current_line(53, ng0);
+    t2 = ((char*)((ng2)));
+    t3 = (t0 + 1448);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 4);
+    xsi_set_current_line(54, ng0);
+    t2 = ((char*)((ng1)));
+    t3 = (t0 + 1608);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
+    xsi_set_current_line(55, ng0);
+    t2 = ((char*)((ng3)));
+    t3 = (t0 + 1768);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
+    xsi_set_current_line(56, ng0);
+    t2 = (t0 + 2488);
+    xsi_process_wait(t2, 100000LL);
+    *((char **)t1) = &&LAB7;
+    goto LAB1;
+
+LAB7:    goto LAB1;
 
 }
 

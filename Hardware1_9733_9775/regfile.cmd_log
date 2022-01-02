@@ -16,3 +16,13 @@ xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/r
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.syr" 
 xst -intstyle ise -ifn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.syr" 
 xst -intstyle ise -ifn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45t-fgg484-3 regfile.ngc regfile.ngd  
+map -intstyle ise -p xc6slx45t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o regfile_map.ncd regfile.ngd regfile.pcf 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.syr" 

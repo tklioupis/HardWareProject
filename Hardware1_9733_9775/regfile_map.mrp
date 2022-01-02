@@ -1,0 +1,13 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'regfile'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45t-fgg484-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o regfile_map.ncd regfile.ngd regfile.pcf 
+Target Device  : xc6slx45t
+Target Package : fgg484
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sun Jan  2 18:15:36 2022

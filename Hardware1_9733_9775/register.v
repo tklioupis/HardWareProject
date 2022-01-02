@@ -24,7 +24,7 @@ module register(input [31:0] Data, input CLK, input WE, output [31:0] Dout);
 	always @(posedge CLK) 
 	begin
 		if (WE)
-			res <= #1 Data;
+			res <= Data;
 	end
 endmodule 
 

@@ -57,7 +57,7 @@ module mux(
 	 
 	reg [31:0]res;
 	assign Dout = res;
-	always @(Ard) 
+	always @(*) 
 	begin
 		case(Ard)
 			5'b00000: begin res = Din0; end
@@ -96,14 +96,6 @@ module mux(
 	end
 		
 endmodule
-
-//input [31:0] Din[31:0],
-//		reg [31:0]res;
-//		assign Dout = res;
-//		always @(*)
-//		begin 
-//			res <= Din[Ard];
-//		end
 
 
 

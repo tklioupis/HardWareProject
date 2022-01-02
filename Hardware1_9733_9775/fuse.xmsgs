@@ -5,14 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.v" Line 115: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din0</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.v" Line 77: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Dout</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.v" Line 110: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din0</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
-</msg>
-
 </messages>
 

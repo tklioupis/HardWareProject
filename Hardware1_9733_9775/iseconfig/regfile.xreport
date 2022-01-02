@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-01-02T15:34:23</DateModified>
+  <DateModified>2022-01-02T18:18:43</DateModified>
   <ModuleName>regfile</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/temp/HardWareProject/Hardware1_9733_9775/iseconfig/regfile.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/temp/HardWareProject/Hardware1_9733_9775/</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2022-01-02T18:15:41</SummaryTimeStamp>
+  <SavedFilePath>/home/ise/Projects/HardWareProject/Hardware1_9733_9775/iseconfig/regfile.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/Projects/HardWareProject/Hardware1_9733_9775/</ImplementationReportsDirectory>
   <DateInitialized>2022-01-02T13:49:05</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

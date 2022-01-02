@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/temp/HardWareProject/Hardware1_9733_9775/register.v";
+static const char *ng0 = "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/register.v";
 
 
 
@@ -113,7 +113,7 @@ LAB6:    xsi_set_current_line(27, ng0);
     t11 = (t0 + 1048U);
     t12 = *((char **)t11);
     t11 = (t0 + 1928);
-    xsi_vlogvar_wait_assign_value(t11, t12, 0, 0, 32, 1000LL);
+    xsi_vlogvar_wait_assign_value(t11, t12, 0, 0, 32, 0LL);
     goto LAB8;
 
 }

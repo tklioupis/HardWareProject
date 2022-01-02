@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   15:34:46 01/02/2022
+// Create Date:   18:20:51 01/02/2022
 // Design Name:   regfile
-// Module Name:   /home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile_tb.v
+// Module Name:   /home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile_tb.v
 // Project Name:  Hardware1_9733_9775
 // Target Device:  
 // Tool versions:  
@@ -35,7 +35,6 @@ module regfile_tb;
 	// Outputs
 	wire [31:0] Dout1;
 	wire [31:0] Dout2;
-	wire andres;
 
 	// Instantiate the Unit Under Test (UUT)
 	regfile uut (
@@ -44,7 +43,6 @@ module regfile_tb;
 		.Awr(Awr), 
 		.Dout1(Dout1), 
 		.Dout2(Dout2), 
-		.andres(andres), 
 		.Din(Din), 
 		.WrEn(WrEn), 
 		.Clk(Clk)
@@ -52,20 +50,28 @@ module regfile_tb;
 
 	initial begin
 		// Initialize Inputs
-		Ard1 = 5'd1;
-		Ard2 = 5'd1;
-		Awr = 5'd1;
-		Din = 32'd1;
-		WrEn = 1'b1;
-		Clk = 1'b1;
+		Ard1 = 0;
+		Ard2 = 0;
+		Awr = 0;
+		Din = 1;
+		WrEn = 1;
+		Clk = 1;
 		#100;
-		Clk = 1'b0;
+		Clk = 0;
 		#100;
-		Clk = 1'b1;
+		Clk = 1;
 		#100;
-		Clk = 1'b0;
-		#100; 
-        
+		Ard1 = 15;
+		Ard2 = 0;
+		Awr = 15;
+		Din = 22;
+		WrEn = 1;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
 		// Add stimulus here
 
 	end

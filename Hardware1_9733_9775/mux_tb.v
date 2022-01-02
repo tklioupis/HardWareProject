@@ -134,13 +134,12 @@ module mux_tb;
 		Din29 = 32'd29;
 		Din30 = 32'd30;
 		Din31 = 32'd31;
-		Ard = 13;
+		Ard = 1;
 		#100;
-		Ard = 5;
+		Ard = 4;
 		#100;
-		Ard = 22;
+		Ard = 8;
 		#100;
-		
 
 	end
       

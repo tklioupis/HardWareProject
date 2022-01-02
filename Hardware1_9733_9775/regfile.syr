@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: regfile.prj
@@ -108,13 +108,13 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/register.v" into library work
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/register.v" into library work
 Parsing module <register>.
-Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" into library work
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux.v" into library work
 Parsing module <mux>.
-Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decoder.v" into library work
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decoder.v" into library work
 Parsing module <decoder>.
-Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.v" into library work
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v" into library work
 Parsing module <regfile>.
 
 =========================================================================
@@ -126,70 +126,35 @@ Elaborating module <regfile>.
 Elaborating module <decoder>.
 
 Elaborating module <register>.
-WARNING:HDLCompiler:189 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.v" Line 77: Size mismatch in connection of port <Dout>. Formal port size is 32-bit while actual signal size is 1-bit.
 
 Elaborating module <mux>.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 63: Signal <Din0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 64: Signal <Din1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 65: Signal <Din2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 66: Signal <Din3> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 67: Signal <Din4> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 68: Signal <Din5> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 69: Signal <Din6> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 70: Signal <Din7> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 71: Signal <Din8> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 72: Signal <Din9> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 73: Signal <Din10> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 74: Signal <Din11> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 75: Signal <Din12> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 76: Signal <Din13> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 77: Signal <Din14> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 78: Signal <Din15> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 79: Signal <Din16> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 80: Signal <Din17> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 81: Signal <Din18> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 82: Signal <Din19> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 83: Signal <Din20> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 84: Signal <Din21> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 85: Signal <Din22> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 86: Signal <Din23> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 87: Signal <Din24> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 88: Signal <Din25> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 89: Signal <Din26> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 90: Signal <Din27> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 91: Signal <Din28> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 92: Signal <Din29> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 93: Signal <Din30> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v" Line 94: Signal <Din31> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:189 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.v" Line 110: Size mismatch in connection of port <Din0>. Formal port size is 32-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.v" Line 115: Size mismatch in connection of port <Din0>. Formal port size is 32-bit while actual signal size is 1-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <regfile>.
-    Related source file is "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.v".
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v".
     Summary:
 	no macro.
 Unit <regfile> synthesized.
 
 Synthesizing Unit <decoder>.
-    Related source file is "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decoder.v".
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decoder.v".
     Found 32x32-bit Read Only RAM for signal <res>
     Summary:
 	inferred   1 RAM(s).
 Unit <decoder> synthesized.
 
 Synthesizing Unit <register>.
-    Related source file is "/home/ise/temp/HardWareProject/Hardware1_9733_9775/register.v".
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/register.v".
     Found 32-bit register for signal <res>.
     Summary:
 	inferred  32 D-type flip-flop(s).
 Unit <register> synthesized.
 
 Synthesizing Unit <mux>.
-    Related source file is "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux.v".
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux.v".
     Found 32-bit 32-to-1 multiplexer for signal <res> created at line 62.
     Summary:
 	inferred   1 Multiplexer(s).
@@ -212,37 +177,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:2677 - Node <res_1> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_2> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_3> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_4> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_5> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_6> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_7> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_8> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_9> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_10> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_11> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_12> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_13> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_14> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_15> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_16> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_17> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_18> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_19> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_20> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_21> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_22> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_23> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_24> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_25> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_26> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_27> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_28> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_29> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_30> of sequential type is unconnected in block <reg0>.
-WARNING:Xst:2677 - Node <res_31> of sequential type is unconnected in block <reg0>.
 
 Synthesizing (advanced) Unit <decoder>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_res> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -274,43 +208,12 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2677 - Node <reg0/res_31> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_30> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_29> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_28> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_27> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_26> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_25> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_24> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_23> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_22> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_21> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_20> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_19> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_18> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_17> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_16> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_15> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_14> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_13> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_12> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_11> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_10> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_9> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_8> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_7> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_6> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_5> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_4> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_3> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_2> of sequential type is unconnected in block <regfile>.
-WARNING:Xst:2677 - Node <reg0/res_1> of sequential type is unconnected in block <regfile>.
 
 Optimizing unit <regfile> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block regfile, actual ratio is 5.
+Found area constraint ratio of 100 (+ 5) on block regfile, actual ratio is 6.
 
 Final Macro Processing ...
 
@@ -318,8 +221,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 993
- Flip-Flops                                            : 993
+# Registers                                            : 1024
+ Flip-Flops                                            : 1024
 
 =========================================================================
 
@@ -343,11 +246,10 @@ Top Level Output File Name         : regfile.ngc
 Primitive and Black Box Usage:
 ------------------------------
 # BELS                             : 736
-#      LUT5                        : 62
-#      LUT6                        : 610
+#      LUT6                        : 672
 #      MUXF7                       : 64
-# FlipFlops/Latches                : 993
-#      FDE                         : 993
+# FlipFlops/Latches                : 1024
+#      FDE                         : 1024
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 112
@@ -361,19 +263,19 @@ Selected Device : 6slx45tfgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             993  out of  54576     1%  
+ Number of Slice Registers:            1024  out of  54576     1%  
  Number of Slice LUTs:                  672  out of  27288     2%  
     Number used as Logic:               672  out of  27288     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1121
-   Number with an unused Flip Flop:     128  out of   1121    11%  
-   Number with an unused LUT:           449  out of   1121    40%  
-   Number of fully used LUT-FF pairs:   544  out of   1121    48%  
+ Number of LUT Flip Flop pairs used:   1152
+   Number with an unused Flip Flop:     128  out of   1152    11%  
+   Number with an unused LUT:           480  out of   1152    41%  
+   Number of fully used LUT-FF pairs:   544  out of   1152    47%  
    Number of unique control sets:        32
 
 IO Utilization: 
- Number of IOs:                         114
+ Number of IOs:                         113
  Number of bonded IOBs:                 113  out of    296    38%  
 
 Specific Feature Utilization:
@@ -400,7 +302,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 993   |
+Clk                                | BUFGP                  | 1024  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -422,7 +324,7 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 6951 / 1986
+  Total number of paths / destination ports: 7168 / 2048
 -------------------------------------------------------------------------
 Offset:              4.694ns (Levels of Logic = 2)
   Source:            Awr<3> (PAD)
@@ -442,7 +344,7 @@ Offset:              4.694ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 1986 / 64
+  Total number of paths / destination ports: 2048 / 64
 -------------------------------------------------------------------------
 Offset:              5.834ns (Levels of Logic = 4)
   Source:            reg26/res_31 (FF)
@@ -491,15 +393,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 15.84 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.14 secs
  
 --> 
 
 
-Total memory usage is 485648 kilobytes
+Total memory usage is 485664 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   97 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

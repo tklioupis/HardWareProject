@@ -24,10 +24,19 @@ module regfile(
     input [4:0] Awr,
     output [31:0] Dout1,
     output [31:0] Dout2,
+	 output andres,
     input [31:0] Din,
     input WrEn,
     input Clk
     );
+	 
+	reg are;
+	assign andres = are;
+		always@(*);
+		begin
+			are = WrEn ;
+		end
+	 
 	wire [31:0] WEd;
 	wire [31:0] regDout1;
 	wire [31:0] regDout2;
@@ -60,7 +69,11 @@ module regfile(
 	wire [31:0] regDout29;
 	wire [31:0] regDout30;
 	wire [31:0] regDout31;
+	
 	decoder dec(.Awr(Awr),.WEd(WEd));
+	
+
+	
 	register reg0(.Data(Din),.CLK(Clk),.WE(WrEn & WEd[0]),.Dout(regDout0));
 	register reg1(.Data(Din),.CLK(Clk),.WE(WrEn & WEd[1]),.Dout(regDout1));
 	register reg2(.Data(Din),.CLK(Clk),.WE(WrEn & WEd[2]),.Dout(regDout2));
@@ -105,6 +118,7 @@ module regfile(
 				.Din24(regDout24),.Din25(regDout25),.Din26(regDout26),.Din27(regDout27),.Din28(regDout28),.Din29(regDout29),.Din30(regDout30),.Din31(regDout31),
 				.Ard(Ard2),.Dout(Dout2));
 	
+
 endmodule
 
 

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-01-01T16:48:13</DateModified>
-  <ModuleName>alu</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <DateModified>2022-01-02T11:51:31</DateModified>
+  <ModuleName>decoder</ModuleName>
+  <SummaryTimeStamp>2022-01-02T11:50:02</SummaryTimeStamp>
   <SavedFilePath>/home/ise/Projects/HardWareProject/Hardware1_9733_9775/iseconfig/alu.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/ise/Projects/HardWareProject/Hardware1_9733_9775/</ImplementationReportsDirectory>
-  <DateInitialized>2022-01-01T14:49:44</DateInitialized>
+  <DateInitialized>2022-01-02T11:51:30</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

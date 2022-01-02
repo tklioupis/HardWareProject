@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
 --> 
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/alu.v" into library work
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/alu.v" into library work
 Parsing module <alu>.
 
 =========================================================================
@@ -122,10 +122,10 @@ Elaborating module <alu>.
 =========================================================================
 
 Synthesizing Unit <alu>.
-    Related source file is "/home/ise/Xilinx/HardWareProject/Hardware1_9733_9775/alu.v".
-    Found 32-bit subtractor for signal <A[31]_B[31]_sub_3_OUT> created at line 36.
-    Found 32-bit adder for signal <A[31]_B[31]_add_6_OUT> created at line 53.
-    Found 32-bit 14-to-1 multiplexer for signal <Out> created at line 32.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/alu.v".
+    Found 32-bit subtractor for signal <A[31]_B[31]_sub_3_OUT> created at line 38.
+    Found 32-bit adder for signal <A[31]_B[31]_add_6_OUT> created at line 55.
+    Found 32-bit 14-to-1 multiplexer for signal <Out> created at line 34.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   1 Multiplexer(s).
@@ -197,18 +197,19 @@ Top Level Output File Name         : alu.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 293
+# BELS                             : 300
 #      GND                         : 1
 #      LUT2                        : 65
 #      LUT3                        : 32
 #      LUT4                        : 3
-#      LUT6                        : 65
+#      LUT5                        : 1
+#      LUT6                        : 71
 #      MUXCY                       : 62
 #      VCC                         : 1
 #      XORCY                       : 64
-# IO Buffers                       : 100
+# IO Buffers                       : 101
 #      IBUF                        : 68
-#      OBUF                        : 32
+#      OBUF                        : 33
 
 Device utilization summary:
 ---------------------------
@@ -217,19 +218,19 @@ Selected Device : 6slx45tfgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                  165  out of  27288     0%  
-    Number used as Logic:               165  out of  27288     0%  
+ Number of Slice LUTs:                  172  out of  27288     0%  
+    Number used as Logic:               172  out of  27288     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    165
-   Number with an unused Flip Flop:     165  out of    165   100%  
-   Number with an unused LUT:             0  out of    165     0%  
-   Number of fully used LUT-FF pairs:     0  out of    165     0%  
+ Number of LUT Flip Flop pairs used:    172
+   Number with an unused Flip Flop:     172  out of    172   100%  
+   Number with an unused LUT:             0  out of    172     0%  
+   Number of fully used LUT-FF pairs:     0  out of    172     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                         101
- Number of bonded IOBs:                 100  out of    296    33%  
+ Number of bonded IOBs:                 101  out of    296    34%  
 
 Specific Feature Utilization:
 
@@ -264,7 +265,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 8.781ns
+   Maximum combinational path delay: 12.270ns
 
 Timing Details:
 ---------------
@@ -272,24 +273,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 3715 / 32
+  Total number of paths / destination ports: 7429 / 33
 -------------------------------------------------------------------------
-Delay:               8.781ns (Levels of Logic = 5)
-  Source:            Op<1> (PAD)
-  Destination:       Out<31> (PAD)
+Delay:               12.270ns (Levels of Logic = 8)
+  Source:            Op<3> (PAD)
+  Destination:       Zero (PAD)
 
-  Data Path: Op<1> to Out<31>
+  Data Path: Op<3> to Zero
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            36   1.222   1.596  Op_1_IBUF (Op_1_IBUF)
-     LUT4:I0->O           31   0.203   1.622  Mmux_Out5041 (Mmux_Out504)
-     LUT6:I1->O            1   0.203   0.580  Mmux_Out501 (Mmux_Out50)
-     LUT3:I2->O            1   0.205   0.579  Mmux_Out503 (Out_31_OBUF)
-     OBUF:I->O                 2.571          Out_31_OBUF (Out<31>)
+     IBUF:I->O            38   1.222   1.605  Op_3_IBUF (Op_3_IBUF)
+     LUT4:I1->O           31   0.205   1.622  Mmux_Out5041 (Mmux_Out504)
+     LUT6:I1->O            1   0.203   0.580  Mmux_Out241 (Mmux_Out24)
+     LUT3:I2->O            2   0.205   0.981  Mmux_Out243 (Out_1_OBUF)
+     LUT6:I0->O            1   0.203   0.944  Zero<31>1 (Zero<31>)
+     LUT6:I0->O            1   0.203   0.944  Zero<31>2 (Zero<31>1)
+     LUT6:I0->O            1   0.203   0.579  Zero<31>7 (Zero_OBUF)
+     OBUF:I->O                 2.571          Zero_OBUF (Zero)
     ----------------------------------------
-    Total                      8.781ns (4.404ns logic, 4.377ns route)
-                                       (50.2% logic, 49.8% route)
+    Total                     12.270ns (5.015ns logic, 7.255ns route)
+                                       (40.9% logic, 59.1% route)
 
 =========================================================================
 
@@ -300,12 +304,12 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 10.15 secs
+Total CPU time to Xst completion: 11.01 secs
  
 --> 
 
 
-Total memory usage is 475484 kilobytes
+Total memory usage is 475568 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

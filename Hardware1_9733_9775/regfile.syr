@@ -5,17 +5,17 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
-Reading design: mux.prj
+Reading design: regfile.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -43,16 +43,16 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "mux.prj"
+Input File Name                    : "regfile.prj"
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "mux"
+Output File Name                   : "regfile"
 Output Format                      : NGC
 Target Device                      : xc6slx45t-3-fgg484
 
 ---- Source Options
-Top Module Name                    : mux
+Top Module Name                    : regfile
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -108,12 +108,25 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/register.v" into library work
+Parsing module <register>.
 Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux.v" into library work
 Parsing module <mux>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decoder.v" into library work
+Parsing module <decoder>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v" into library work
+Parsing module <regfile>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
+
+Elaborating module <regfile>.
+
+Elaborating module <decoder>.
+
+Elaborating module <register>.
+WARNING:HDLCompiler:189 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v" Line 64: Size mismatch in connection of port <Dout>. Formal port size is 32-bit while actual signal size is 1-bit.
 
 Elaborating module <mux>.
 WARNING:HDLCompiler:91 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux.v" Line 63: Signal <Din0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
@@ -148,14 +161,36 @@ WARNING:HDLCompiler:91 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775
 WARNING:HDLCompiler:91 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux.v" Line 92: Signal <Din29> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux.v" Line 93: Signal <Din30> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux.v" Line 94: Signal <Din31> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:189 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v" Line 97: Size mismatch in connection of port <Din0>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v" Line 102: Size mismatch in connection of port <Din0>. Formal port size is 32-bit while actual signal size is 1-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
+Synthesizing Unit <regfile>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v".
+    Summary:
+	no macro.
+Unit <regfile> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decoder.v".
+    Found 32x32-bit Read Only RAM for signal <res>
+    Summary:
+	inferred   1 RAM(s).
+Unit <decoder> synthesized.
+
+Synthesizing Unit <register>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/register.v".
+    Found 32-bit register for signal <res>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <register> synthesized.
+
 Synthesizing Unit <mux>.
     Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux.v".
-    Found 32-bit 32-to-1 multiplexer for signal <Dout> created at line 62.
+    Found 32-bit 32-to-1 multiplexer for signal <res> created at line 62.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <mux> synthesized.
@@ -164,8 +199,12 @@ Unit <mux> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 1
- 32-bit 32-to-1 multiplexer                            : 1
+# RAMs                                                 : 1
+ 32x32-bit single-port Read Only RAM                   : 1
+# Registers                                            : 32
+ 32-bit register                                       : 32
+# Multiplexers                                         : 2
+ 32-bit 32-to-1 multiplexer                            : 2
 
 =========================================================================
 
@@ -173,32 +212,115 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:2677 - Node <res_1> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_2> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_3> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_4> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_5> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_6> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_7> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_8> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_9> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_10> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_11> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_12> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_13> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_14> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_15> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_16> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_17> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_18> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_19> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_20> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_21> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_22> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_23> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_24> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_25> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_26> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_27> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_28> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_29> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_30> of sequential type is unconnected in block <reg0>.
+WARNING:Xst:2677 - Node <res_31> of sequential type is unconnected in block <reg0>.
+
+Synthesizing (advanced) Unit <decoder>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_res> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Awr>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <res>           |          |
+    -----------------------------------------------------------------------
+Unit <decoder> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 1
- 32-bit 32-to-1 multiplexer                            : 1
+# RAMs                                                 : 1
+ 32x32-bit single-port distributed Read Only RAM       : 1
+# Registers                                            : 1024
+ Flip-Flops                                            : 1024
+# Multiplexers                                         : 2
+ 32-bit 32-to-1 multiplexer                            : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <reg0/res_31> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_30> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_29> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_28> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_27> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_26> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_25> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_24> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_23> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_22> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_21> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_20> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_19> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_18> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_17> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_16> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_15> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_14> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_13> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_12> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_11> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_10> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_9> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_8> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_7> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_6> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_5> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_4> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_3> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_2> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <reg0/res_1> of sequential type is unconnected in block <regfile>.
 
-Optimizing unit <mux> ...
+Optimizing unit <regfile> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block mux, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block regfile, actual ratio is 5.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 993
+ Flip-Flops                                            : 993
+
 =========================================================================
 
 =========================================================================
@@ -216,16 +338,21 @@ Partition Implementation Status
 *                            Design Summary                             *
 =========================================================================
 
-Top Level Output File Name         : mux.ngc
+Top Level Output File Name         : regfile.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 352
-#      LUT6                        : 320
-#      MUXF7                       : 32
-# IO Buffers                       : 1061
-#      IBUF                        : 1029
-#      OBUF                        : 32
+# BELS                             : 736
+#      LUT5                        : 62
+#      LUT6                        : 610
+#      MUXF7                       : 64
+# FlipFlops/Latches                : 993
+#      FDE                         : 993
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 112
+#      IBUF                        : 48
+#      OBUF                        : 64
 
 Device utilization summary:
 ---------------------------
@@ -234,23 +361,23 @@ Selected Device : 6slx45tfgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                  320  out of  27288     1%  
-    Number used as Logic:               320  out of  27288     1%  
+ Number of Slice Registers:             993  out of  54576     1%  
+ Number of Slice LUTs:                  672  out of  27288     2%  
+    Number used as Logic:               672  out of  27288     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    320
-   Number with an unused Flip Flop:     320  out of    320   100%  
-   Number with an unused LUT:             0  out of    320     0%  
-   Number of fully used LUT-FF pairs:     0  out of    320     0%  
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:   1121
+   Number with an unused Flip Flop:     128  out of   1121    11%  
+   Number with an unused LUT:           449  out of   1121    40%  
+   Number of fully used LUT-FF pairs:   544  out of   1121    48%  
+   Number of unique control sets:        32
 
 IO Utilization: 
- Number of IOs:                        1061
- Number of bonded IOBs:                1061  out of    296   358% (*) 
+ Number of IOs:                         113
+ Number of bonded IOBs:                 113  out of    296    38%  
 
 Specific Feature Utilization:
-
-WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -270,7 +397,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 993   |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -281,8 +412,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Minimum input arrival time before clock: 4.694ns
+   Maximum output required time after clock: 5.834ns
    Maximum combinational path delay: 8.176ns
 
 Timing Details:
@@ -290,22 +421,64 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1696 / 32
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 6951 / 1986
 -------------------------------------------------------------------------
-Delay:               8.176ns (Levels of Logic = 5)
-  Source:            Ard<1> (PAD)
-  Destination:       Dout<31> (PAD)
+Offset:              4.694ns (Levels of Logic = 2)
+  Source:            Awr<3> (PAD)
+  Destination:       reg31/res_31 (FF)
+  Destination Clock: Clk rising
 
-  Data Path: Ard<1> to Dout<31>
+  Data Path: Awr<3> to reg31/res_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           256   1.222   2.431  Ard_1_IBUF (Ard_1_IBUF)
-     LUT6:I0->O            1   0.203   0.827  Mmux_Dout_81 (Mmux_Dout_81)
-     LUT6:I2->O            1   0.203   0.000  Mmux_Dout_3 (Mmux_Dout_3)
-     MUXF7:I1->O           1   0.140   0.579  Mmux_Dout_2_f7 (Dout_0_OBUF)
-     OBUF:I->O                 2.571          Dout_0_OBUF (Dout<0>)
+     IBUF:I->O            32   1.222   1.656  Awr_3_IBUF (Awr_3_IBUF)
+     LUT6:I0->O           32   0.203   1.291  WrEn_WEd[8]_AND_9_o1 (WrEn_WEd[8]_AND_9_o)
+     FDE:CE                    0.322          reg8/res_0
+    ----------------------------------------
+    Total                      4.694ns (1.747ns logic, 2.947ns route)
+                                       (37.2% logic, 62.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 1986 / 64
+-------------------------------------------------------------------------
+Offset:              5.834ns (Levels of Logic = 4)
+  Source:            reg26/res_31 (FF)
+  Destination:       Dout1<31> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: reg26/res_31 to Dout1<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.864  reg26/res_31 (reg26/res_31)
+     LUT6:I2->O            1   0.203   0.827  mux2/Mmux_res_873 (mux2/Mmux_res_873)
+     LUT6:I2->O            1   0.203   0.000  mux2/Mmux_res_324 (mux2/Mmux_res_324)
+     MUXF7:I1->O           1   0.140   0.579  mux2/Mmux_res_2_f7_23 (Dout2_31_OBUF)
+     OBUF:I->O                 2.571          Dout2_31_OBUF (Dout2<31>)
+    ----------------------------------------
+    Total                      5.834ns (3.564ns logic, 2.270ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1344 / 64
+-------------------------------------------------------------------------
+Delay:               8.176ns (Levels of Logic = 5)
+  Source:            Ard1<1> (PAD)
+  Destination:       Dout1<31> (PAD)
+
+  Data Path: Ard1<1> to Dout1<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           256   1.222   2.431  Ard1_1_IBUF (Ard1_1_IBUF)
+     LUT6:I0->O            1   0.203   0.827  mux1/Mmux_res_81 (mux1/Mmux_res_81)
+     LUT6:I2->O            1   0.203   0.000  mux1/Mmux_res_3 (mux1/Mmux_res_3)
+     MUXF7:I1->O           1   0.140   0.579  mux1/Mmux_res_2_f7 (Dout1_0_OBUF)
+     OBUF:I->O                 2.571          Dout1_0_OBUF (Dout1<0>)
     ----------------------------------------
     Total                      8.176ns (4.339ns logic, 3.837ns route)
                                        (53.1% logic, 46.9% route)
@@ -318,15 +491,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.46 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.16 secs
  
 --> 
 
 
-Total memory usage is 475956 kilobytes
+Total memory usage is 485632 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   33 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   97 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

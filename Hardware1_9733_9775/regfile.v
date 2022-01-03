@@ -98,12 +98,12 @@ module regfile(
 	register reg30(.Data(Din),.CLK(Clk),.WE(WrEn & WEd[30]),.Dout(regDout30));
 	register reg31(.Data(Din),.CLK(Clk),.WE(WrEn & WEd[31]),.Dout(regDout31));
 	
-	mux mux1(.Din0(regDout0),.Din1(regDout1),.Din2(regDout2),.Din3(regDout3),.Din4(regDout4),.Din5(regDout5),.Din6(regDout6),.Din7(regDout7),
+	mux32to1 mux1(.Din0(regDout0),.Din1(regDout1),.Din2(regDout2),.Din3(regDout3),.Din4(regDout4),.Din5(regDout5),.Din6(regDout6),.Din7(regDout7),
 				.Din8(regDout8),.Din9(regDout9),.Din10(regDout10),.Din11(regDout11),.Din12(regDout12),.Din13(regDout13),.Din14(regDout14),.Din15(regDout15),
 				.Din16(regDout16),.Din17(regDout17),.Din18(regDout18),.Din19(regDout19),.Din20(regDout20),.Din21(regDout21),.Din22(regDout22),.Din23(regDout23),
 				.Din24(regDout24),.Din25(regDout25),.Din26(regDout26),.Din27(regDout27),.Din28(regDout28),.Din29(regDout29),.Din30(regDout30),.Din31(regDout31),
 				.Ard(Ard1),.Dout(Dout1));
-	mux mux2(.Din0(regDout0),.Din1(regDout1),.Din2(regDout2),.Din3(regDout3),.Din4(regDout4),.Din5(regDout5),.Din6(regDout6),.Din7(regDout7),
+	mux32to1 mux2(.Din0(regDout0),.Din1(regDout1),.Din2(regDout2),.Din3(regDout3),.Din4(regDout4),.Din5(regDout5),.Din6(regDout6),.Din7(regDout7),
 				.Din8(regDout8),.Din9(regDout9),.Din10(regDout10),.Din11(regDout11),.Din12(regDout12),.Din13(regDout13),.Din14(regDout14),.Din15(regDout15),
 				.Din16(regDout16),.Din17(regDout17),.Din18(regDout18),.Din19(regDout19),.Din20(regDout20),.Din21(regDout21),.Din22(regDout22),.Din23(regDout23),
 				.Din24(regDout24),.Din25(regDout25),.Din26(regDout26),.Din27(regDout27),.Din28(regDout28),.Din29(regDout29),.Din30(regDout30),.Din31(regDout31),

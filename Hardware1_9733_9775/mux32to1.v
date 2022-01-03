@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module mux(
+module mux32to1(
 	 input [31:0] Din0,
 	 input [31:0] Din1,
 	 input [31:0] Din2,

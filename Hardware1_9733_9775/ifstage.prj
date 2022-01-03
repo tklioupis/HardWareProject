@@ -1,0 +1,4 @@
+verilog work "PCregister.v"
+verilog work "mux2to1.v"
+verilog work "imem.v"
+verilog work "ifstage.v"

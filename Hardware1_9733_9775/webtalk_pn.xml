@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue Jan  4 10:48:08 2022">
+<application name="pn" timeStamp="Tue Jan  4 11:38:35 2022">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="944510E3AE2A85FC993BFAC091BE7F85" type="project"/>
 <property name="ProjectIteration" value="1" type="project"/>
-<property name="ProjectFile" value="/home/ise/temp/HardWareProject/Hardware1_9733_9775/Hardware1_9733_9775.xise" type="project"/>
+<property name="ProjectFile" value="/home/ise/Projects/HardWareProject/Hardware1_9733_9775/Hardware1_9733_9775.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2021-12-31T18:01:32" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">

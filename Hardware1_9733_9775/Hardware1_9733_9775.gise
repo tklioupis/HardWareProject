@@ -65,6 +65,15 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="decoder_tb_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="decoder_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="decoder_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="decstage.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="decstage.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="decstage.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="decstage.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="decstage.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="decstage.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="decstage.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="decstage.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="decstage_xst.xrpt"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ifstage.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ifstage.lso"/>
@@ -196,46 +205,44 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641242244" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3710905232592320999" xil_pn:start_ts="1641242244">
+    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2440650895661941291" xil_pn:start_ts="1641293690">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641242244" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7907212683910148484" xil_pn:start_ts="1641242244">
+    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3901381560726210744" xil_pn:start_ts="1641293690">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641242244" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1641242244">
+    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1641293690">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641242244" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="6495552044233310107" xil_pn:start_ts="1641242244">
+    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7451391194300260311" xil_pn:start_ts="1641293690">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641242244" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3972139311098429560" xil_pn:start_ts="1641242244">
+    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3972139311098429560" xil_pn:start_ts="1641293690">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641242244" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="1095548628042265158" xil_pn:start_ts="1641242244">
+    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5759396936576792830" xil_pn:start_ts="1641293690">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641293312" xil_pn:in_ck="3413398643897788916" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4195026263277122805" xil_pn:start_ts="1641293288">
+    <transform xil_pn:end_ts="1641296332" xil_pn:in_ck="8178399190318076208" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4089905777597526585" xil_pn:start_ts="1641296314">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="decode.lso"/>
-      <outfile xil_pn:name="decode.ngc"/>
-      <outfile xil_pn:name="decode.ngr"/>
-      <outfile xil_pn:name="decode.prj"/>
-      <outfile xil_pn:name="decode.stx"/>
-      <outfile xil_pn:name="decode.syr"/>
-      <outfile xil_pn:name="decode.xst"/>
-      <outfile xil_pn:name="decode_xst.xrpt"/>
       <outfile xil_pn:name="decoder.ngr"/>
-      <outfile xil_pn:name="decoder.prj"/>
-      <outfile xil_pn:name="decoder_tb_stx_beh.prj"/>
+      <outfile xil_pn:name="decstage.lso"/>
+      <outfile xil_pn:name="decstage.ngc"/>
+      <outfile xil_pn:name="decstage.ngr"/>
+      <outfile xil_pn:name="decstage.prj"/>
+      <outfile xil_pn:name="decstage.stx"/>
+      <outfile xil_pn:name="decstage.syr"/>
+      <outfile xil_pn:name="decstage.xst"/>
+      <outfile xil_pn:name="decstage_xst.xrpt"/>
       <outfile xil_pn:name="regfile.ngr"/>
       <outfile xil_pn:name="register.ngr"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>

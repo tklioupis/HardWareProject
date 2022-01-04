@@ -1,11 +1,11 @@
 set -tmpdir "xst/projnav.tmp"
 set -xsthdpdir "xst"
 run
--ifn ifstage.prj
--ofn ifstage
+-ifn decstage.prj
+-ofn decstage
 -ofmt NGC
 -p xc6slx45t-3-fgg484
--top ifstage
+-top decstage
 -opt_mode Speed
 -opt_level 1
 -power NO

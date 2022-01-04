@@ -10,3 +10,4 @@ xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/i
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.syr" 
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.syr" 
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.syr" 

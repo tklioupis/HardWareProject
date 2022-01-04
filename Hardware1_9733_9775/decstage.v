@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module decode(
+module decstage(
     input [31:0] Instr,
     input RF_WrEn,
     input [31:0] ALU_out,
@@ -32,28 +32,36 @@ module decode(
     );
 	 
 	 wire [4:0] mux0out;
-	 wire [4:0] mux1out; 
+	 wire [31:0] mux1out; 
 	 reg [31:0] resIm; 
 	 wire [5:0] opcode ;
 	 reg [31:0] SiEx ;
-	 reg [32:0] ZeFi ;
+	 reg [31:0] ZeFi ;
+	 reg [31:0] rfa;
+	 reg [31:0] rfb;
 	 assign opcode = Instr[31:26];
 	 assign Immed = resIm;
+//	 assign RF_A = rfa;
+//	 assign RF_B = rfb;
 	 
 		
 	mux2to1_5bit mux0 (.Din0(Instr[15:11]), .Din1(Instr[20:16]), .Sel(RF_B_sel), .Dout(mux0out));
 	mux2to1 mux1 (.Din0(ALU_out), .Din1(MEM_out), .Sel(RF_WrData_sel), .Dout(mux1out));
-	
 	regfile RF (.Ard1(Instr[25:21]), .Ard2(mux0out), .Awr(Instr[20:16]), .Din(mux1out), .WrEn(RF_WrEn), .Clk(Clk), .Dout1(RF_A), .Dout2(RF_B)); 
+	
 	always@(*)
 	begin
+//		mux1out = (Instr[20:16] == 0) ? 0 : mux1out;
+//		rfa = (Instr[25:21] == 0) ? 0 : rfa;
+//		rfb = (mux0out == 0) ? 0 : rfb;
 		//SiEx = {Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15:0]};
 		SiEx [15:0] = {Instr[15:0]};
 		SiEx [31:16] = {16{Instr[15]}};
-		ZeFi = {16'b0,Instr[15:0]}; 
+		ZeFi [15:0] = Instr[15:0];
+		ZeFi [31:16] = 16'b0; 
 		resIm = ((opcode == 111000) || (opcode == 110000) || (opcode == 000011) || (opcode == 000111) || (opcode == 001111) || (opcode == 011111))? SiEx :
 				  ((opcode == 110010) || (opcode == 110011)) ? ZeFi :
-				  ((opcode == 111111) || (opcode == 000000) || (opcode == 000001)) ? (SiEx<<2):32'b0; 
+				  ((opcode == 111111) || (opcode == 000000) || (opcode == 000001)) ? (SiEx<<2) : ZeFi; 
 	end
 
 endmodule

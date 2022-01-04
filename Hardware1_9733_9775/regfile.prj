@@ -1,4 +1,4 @@
 verilog work "register.v"
-verilog work "mux.v"
+verilog work "mux32to1.v"
 verilog work "decoder.v"
 verilog work "regfile.v"

@@ -65,7 +65,7 @@ module regfile(
 
 	decoder dec(.Awr(Awr),.WEd(WEd));
 	
-	register reg0(.Data(0),.CLK(Clk),.WE(WrEn && WEd[0]),.Dout(regDout0));
+	register reg0(.Data(32'b0),.CLK(Clk),.WE(WrEn & WEd[0]),.Dout(regDout0));
 	register reg1(.Data(Din),.CLK(Clk),.WE(WrEn & WEd[1]),.Dout(regDout1));
 	register reg2(.Data(Din),.CLK(Clk),.WE(WrEn & WEd[2]),.Dout(regDout2));
 	register reg3(.Data(Din),.CLK(Clk),.WE(WrEn & WEd[3]),.Dout(regDout3));

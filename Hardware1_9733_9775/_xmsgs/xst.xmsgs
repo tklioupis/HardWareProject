@@ -11,13 +11,7 @@
 <msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.v" Line 47: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Din</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">5</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.v" Line 48: Assignment to <arg fmt="%s" index="1">ZeFi</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Instr&lt;10:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Instr&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.v" Line 54: Result of <arg fmt="%d" index="1">33</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">32</arg>-bit target.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">res_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">reg21</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

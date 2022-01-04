@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> 
@@ -142,7 +142,7 @@ Elaborating module <register>.
 
 Elaborating module <mux32to1>.
 WARNING:HDLCompiler:189 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.v" Line 47: Size mismatch in connection of port <Din>. Formal port size is 32-bit while actual signal size is 5-bit.
-WARNING:HDLCompiler:1127 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.v" Line 48: Assignment to ZeFi ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.v" Line 54: Result of 33-bit expression is truncated to fit in 32-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -150,10 +150,8 @@ WARNING:HDLCompiler:1127 - "/home/ise/temp/HardWareProject/Hardware1_9733_9775/d
 
 Synthesizing Unit <decode>.
     Related source file is "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.v".
-WARNING:Xst:647 - Input <Instr<10:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <Instr<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
-	no macro.
+	inferred   2 Multiplexer(s).
 Unit <decode> synthesized.
 
 Synthesizing Unit <mux2to1_5bit>.
@@ -203,9 +201,10 @@ Macro Statistics
  32x32-bit single-port Read Only RAM                   : 1
 # Registers                                            : 32
  32-bit register                                       : 32
-# Multiplexers                                         : 4
+# Multiplexers                                         : 6
  32-bit 2-to-1 multiplexer                             : 1
  32-bit 32-to-1 multiplexer                            : 2
+ 33-bit 2-to-1 multiplexer                             : 2
  5-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -1101,9 +1100,10 @@ Macro Statistics
  32x32-bit single-port distributed Read Only RAM       : 1
 # Registers                                            : 1024
  Flip-Flops                                            : 1024
-# Multiplexers                                         : 4
+# Multiplexers                                         : 6
  32-bit 2-to-1 multiplexer                             : 1
  32-bit 32-to-1 multiplexer                            : 2
+ 33-bit 2-to-1 multiplexer                             : 2
  5-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -1214,18 +1214,19 @@ Top Level Output File Name         : decode.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 153
+# BELS                             : 172
 #      GND                         : 1
-#      LUT3                        : 10
-#      LUT6                        : 132
+#      LUT3                        : 11
+#      LUT5                        : 3
+#      LUT6                        : 147
 #      MUXF7                       : 10
 # FlipFlops/Latches                : 160
 #      FDE                         : 160
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 92
-#      IBUF                        : 28
-#      OBUF                        : 64
+# IO Buffers                       : 141
+#      IBUF                        : 45
+#      OBUF                        : 96
 
 Device utilization summary:
 ---------------------------
@@ -1235,19 +1236,19 @@ Selected Device : 6slx45tfgg484-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             160  out of  54576     0%  
- Number of Slice LUTs:                  142  out of  27288     0%  
-    Number used as Logic:               142  out of  27288     0%  
+ Number of Slice LUTs:                  161  out of  27288     0%  
+    Number used as Logic:               161  out of  27288     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    210
-   Number with an unused Flip Flop:      50  out of    210    23%  
-   Number with an unused LUT:            68  out of    210    32%  
-   Number of fully used LUT-FF pairs:    92  out of    210    43%  
+ Number of LUT Flip Flop pairs used:    219
+   Number with an unused Flip Flop:      59  out of    219    26%  
+   Number with an unused LUT:            58  out of    219    26%  
+   Number of fully used LUT-FF pairs:   102  out of    219    46%  
    Number of unique control sets:        32
 
 IO Utilization: 
  Number of IOs:                         196
- Number of bonded IOBs:                  93  out of    296    31%  
+ Number of bonded IOBs:                 142  out of    296    47%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -1337,7 +1338,7 @@ Offset:              5.834ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 420 / 10
+  Total number of paths / destination ports: 659 / 42
 -------------------------------------------------------------------------
 Delay:               9.026ns (Levels of Logic = 6)
   Source:            Instr<17> (PAD)
@@ -1365,15 +1366,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 14.38 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 17.57 secs
  
 --> 
 
 
-Total memory usage is 485936 kilobytes
+Total memory usage is 486076 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  901 (   0 filtered)
+Number of warnings :  899 (   0 filtered)
 Number of infos    :   33 (   0 filtered)
 

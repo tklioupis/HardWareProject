@@ -43,6 +43,15 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="alu_tb_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alu_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alu_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="alustage.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="alustage.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="alustage.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="alustage.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alustage.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="alustage.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="alustage.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="alustage.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alustage_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="decode.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="decode.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="decode.ngc"/>
@@ -89,6 +98,15 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="memstage.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="memstage.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="memstage.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="memstage.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="memstage.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="memstage.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="memstage.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="memstage.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="memstage_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="mux.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="mux.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="mux.ngc"/>
@@ -205,46 +223,43 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2440650895661941291" xil_pn:start_ts="1641293690">
+    <transform xil_pn:end_ts="1641299126" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3035109242153974408" xil_pn:start_ts="1641299126">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3901381560726210744" xil_pn:start_ts="1641293690">
+    <transform xil_pn:end_ts="1641299126" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5303419384089379723" xil_pn:start_ts="1641299126">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1641293690">
+    <transform xil_pn:end_ts="1641299126" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1641299126">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7451391194300260311" xil_pn:start_ts="1641293690">
+    <transform xil_pn:end_ts="1641299126" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-5519592741593375606" xil_pn:start_ts="1641299126">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3972139311098429560" xil_pn:start_ts="1641293690">
+    <transform xil_pn:end_ts="1641299126" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3972139311098429560" xil_pn:start_ts="1641299126">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641293690" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5759396936576792830" xil_pn:start_ts="1641293690">
+    <transform xil_pn:end_ts="1641299126" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4357359113213623851" xil_pn:start_ts="1641299126">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641296332" xil_pn:in_ck="8178399190318076208" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4089905777597526585" xil_pn:start_ts="1641296314">
+    <transform xil_pn:end_ts="1641299143" xil_pn:in_ck="1203769678628964171" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-51409708500634054" xil_pn:start_ts="1641299126">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="decoder.ngr"/>
-      <outfile xil_pn:name="decstage.lso"/>
-      <outfile xil_pn:name="decstage.ngc"/>
-      <outfile xil_pn:name="decstage.ngr"/>
-      <outfile xil_pn:name="decstage.prj"/>
-      <outfile xil_pn:name="decstage.stx"/>
-      <outfile xil_pn:name="decstage.syr"/>
-      <outfile xil_pn:name="decstage.xst"/>
-      <outfile xil_pn:name="decstage_xst.xrpt"/>
-      <outfile xil_pn:name="regfile.ngr"/>
-      <outfile xil_pn:name="register.ngr"/>
+      <outfile xil_pn:name="memstage.lso"/>
+      <outfile xil_pn:name="memstage.ngc"/>
+      <outfile xil_pn:name="memstage.ngr"/>
+      <outfile xil_pn:name="memstage.prj"/>
+      <outfile xil_pn:name="memstage.stx"/>
+      <outfile xil_pn:name="memstage.syr"/>
+      <outfile xil_pn:name="memstage.xst"/>
+      <outfile xil_pn:name="memstage_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>

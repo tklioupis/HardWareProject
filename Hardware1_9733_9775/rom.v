@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module imem(
+module rom(
 	input clk, 
 	input [9:0] addr, 
 	output reg [31:0] dout

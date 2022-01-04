@@ -40,6 +40,6 @@ module ifstage(
 		 adder = PC_Immed + PCplus4;
 	 end
 	 
-	 imem memory(.clk(Clk),.addr(PCout[11:2]),.dout(Instr));
+	 rom memRom(.clk(Clk),.addr(PCout[11:2]),.dout(Instr));
 
 endmodule

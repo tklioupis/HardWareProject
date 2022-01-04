@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/memstage.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/memstage.syr" 

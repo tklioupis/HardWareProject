@@ -8,3 +8,4 @@ xst -intstyle ise -ifn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decod
 xst -intstyle ise -ifn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.xst" -ofn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.syr" 
 xst -intstyle ise -ifn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.xst" -ofn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.syr" 
 xst -intstyle ise -ifn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.xst" -ofn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.syr" 
+xst -intstyle ise -ifn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.xst" -ofn "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decode.syr" 

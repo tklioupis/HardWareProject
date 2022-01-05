@@ -27,7 +27,7 @@ module rom(
 	reg [31:0] ROM [1023:0];
 	initial
 	begin
-	$readmemb("rom2.data", ROM);
+		$readmemb("rom3.data", ROM);
 	end
 	always @(posedge clk)
 	begin

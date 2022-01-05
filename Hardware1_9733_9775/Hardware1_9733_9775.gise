@@ -52,6 +52,17 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="alustage.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="alustage.xst"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alustage_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="datapath.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="datapath.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="datapath.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="datapath.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="datapath.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="datapath.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="datapath.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="datapath.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="datapath_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="datapath_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="datapath_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="decode.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="decode.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="decode.ngc"/>
@@ -219,49 +230,54 @@
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1641123197" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1641123197">
+    <transform xil_pn:end_ts="1641401088" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1641401088">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641301178" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5859808816410092883" xil_pn:start_ts="1641301178">
+    <transform xil_pn:end_ts="1641401088" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="259844328705008924" xil_pn:start_ts="1641401088">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641301178" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-6693269987747000970" xil_pn:start_ts="1641301178">
+    <transform xil_pn:end_ts="1641401088" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4354337743792318049" xil_pn:start_ts="1641401088">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641301178" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1641301178">
+    <transform xil_pn:end_ts="1641401088" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1641401088">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641301178" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-7815238448825561323" xil_pn:start_ts="1641301178">
+    <transform xil_pn:end_ts="1641401088" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-8294857655042341090" xil_pn:start_ts="1641401088">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641301178" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3972139311098429560" xil_pn:start_ts="1641301178">
+    <transform xil_pn:end_ts="1641401088" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3972139311098429560" xil_pn:start_ts="1641401088">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641301178" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4750051872670176640" xil_pn:start_ts="1641301178">
+    <transform xil_pn:end_ts="1641401088" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4431627832614229993" xil_pn:start_ts="1641401088">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1641302309" xil_pn:in_ck="1203769678628964171" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4423447543767362875" xil_pn:start_ts="1641302293">
+    <transform xil_pn:end_ts="1641405399" xil_pn:in_ck="-5715288146541785802" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-3485942078423193138" xil_pn:start_ts="1641405371">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="alu.ngr"/>
+      <outfile xil_pn:name="alustage.ngr"/>
+      <outfile xil_pn:name="datapath.lso"/>
+      <outfile xil_pn:name="datapath.ngc"/>
+      <outfile xil_pn:name="datapath.ngr"/>
+      <outfile xil_pn:name="datapath.prj"/>
+      <outfile xil_pn:name="datapath.stx"/>
+      <outfile xil_pn:name="datapath.syr"/>
+      <outfile xil_pn:name="datapath.xst"/>
+      <outfile xil_pn:name="datapath_xst.xrpt"/>
       <outfile xil_pn:name="decoder.ngr"/>
-      <outfile xil_pn:name="regfile.lso"/>
-      <outfile xil_pn:name="regfile.ngc"/>
+      <outfile xil_pn:name="decstage.ngr"/>
+      <outfile xil_pn:name="ifstage.ngr"/>
+      <outfile xil_pn:name="memstage.ngr"/>
       <outfile xil_pn:name="regfile.ngr"/>
-      <outfile xil_pn:name="regfile.prj"/>
-      <outfile xil_pn:name="regfile.stx"/>
-      <outfile xil_pn:name="regfile.syr"/>
-      <outfile xil_pn:name="regfile.xst"/>
-      <outfile xil_pn:name="regfile_tb_beh.prj"/>
-      <outfile xil_pn:name="regfile_xst.xrpt"/>
       <outfile xil_pn:name="register.ngr"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>

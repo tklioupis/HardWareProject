@@ -37,13 +37,8 @@ module decstage(
 	 wire [5:0] opcode ;
 	 reg [31:0] SiEx ;
 	 reg [31:0] ZeFi ;
-	 reg [31:0] rfa;
-	 reg [31:0] rfb;
 	 assign opcode = Instr[31:26];
-	 assign Immed = resIm;
-//	 assign RF_A = rfa;
-//	 assign RF_B = rfb;
-	 
+	 assign Immed = resIm;	 
 		
 	mux2to1_5bit mux0 (.Din0(Instr[15:11]), .Din1(Instr[20:16]), .Sel(RF_B_sel), .Dout(mux0out));
 	mux2to1 mux1 (.Din0(ALU_out), .Din1(MEM_out), .Sel(RF_WrData_sel), .Dout(mux1out));
@@ -51,10 +46,6 @@ module decstage(
 	
 	always@(*)
 	begin
-//		mux1out = (Instr[20:16] == 0) ? 0 : mux1out;
-//		rfa = (Instr[25:21] == 0) ? 0 : rfa;
-//		rfb = (mux0out == 0) ? 0 : rfb;
-		//SiEx = {Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15],Instr[15:0]};
 		SiEx [15:0] = {Instr[15:0]};
 		SiEx [31:16] = {16{Instr[15]}};
 		ZeFi [15:0] = Instr[15:0];

@@ -1,0 +1,845 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: datapath.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "datapath.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "datapath"
+Output Format                      : NGC
+Target Device                      : xc6slx45t-3-fgg484
+
+---- Source Options
+Top Module Name                    : datapath
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/register.v" into library work
+Parsing module <register>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux32to1.v" into library work
+Parsing module <mux32to1>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decoder.v" into library work
+Parsing module <decoder>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/rom.v" into library work
+Parsing module <rom>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v" into library work
+Parsing module <regfile>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ram.v" into library work
+Parsing module <ram>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/PCregister.v" into library work
+Parsing module <PCregister>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux2to1_5bit.v" into library work
+Parsing module <mux2to1_5bit>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux2to1.v" into library work
+Parsing module <mux2to1>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/alu.v" into library work
+Parsing module <alu>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/memstage.v" into library work
+Parsing module <memstage>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.v" into library work
+Parsing module <ifstage>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decstage.v" into library work
+Parsing module <decstage>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/alustage.v" into library work
+Parsing module <alustage>.
+Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/datapath.v" into library work
+Parsing module <datapath>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <datapath>.
+
+Elaborating module <ifstage>.
+
+Elaborating module <mux2to1>.
+
+Elaborating module <PCregister>.
+
+Elaborating module <rom>.
+Reading initialization file \"rom3.data\".
+
+Elaborating module <decstage>.
+
+Elaborating module <mux2to1_5bit>.
+
+Elaborating module <regfile>.
+
+Elaborating module <decoder>.
+
+Elaborating module <register>.
+
+Elaborating module <mux32to1>.
+
+Elaborating module <alustage>.
+
+Elaborating module <alu>.
+
+Elaborating module <memstage>.
+
+Elaborating module <ram>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <datapath>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/datapath.v".
+    Summary:
+	no macro.
+Unit <datapath> synthesized.
+
+Synthesizing Unit <ifstage>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.v".
+    Found 32-bit adder for signal <PCplus4> created at line 39.
+    Found 32-bit adder for signal <adder> created at line 40.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <ifstage> synthesized.
+
+Synthesizing Unit <mux2to1>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux2to1.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux2to1> synthesized.
+
+Synthesizing Unit <PCregister>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/PCregister.v".
+    Found 32-bit register for signal <res>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <PCregister> synthesized.
+
+Synthesizing Unit <rom>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/rom.v".
+WARNING:Xst:2999 - Signal 'ROM', unconnected in block 'rom', is tied to its initial value.
+    Found 1024x32-bit single-port Read Only RAM <Mram_ROM> for signal <ROM>.
+    Found 32-bit register for signal <dout>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <rom> synthesized.
+
+Synthesizing Unit <decstage>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decstage.v".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <decstage> synthesized.
+
+Synthesizing Unit <mux2to1_5bit>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux2to1_5bit.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux2to1_5bit> synthesized.
+
+Synthesizing Unit <regfile>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v".
+    Summary:
+	no macro.
+Unit <regfile> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decoder.v".
+    Found 32x32-bit Read Only RAM for signal <res>
+    Summary:
+	inferred   1 RAM(s).
+Unit <decoder> synthesized.
+
+Synthesizing Unit <register>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/register.v".
+    Found 32-bit register for signal <res>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <register> synthesized.
+
+Synthesizing Unit <mux32to1>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux32to1.v".
+    Found 32-bit 32-to-1 multiplexer for signal <res> created at line 62.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux32to1> synthesized.
+
+Synthesizing Unit <alustage>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/alustage.v".
+INFO:Xst:3210 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/alustage.v" line 32: Output port <Zero> of the instance <alu> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <alustage> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/alu.v".
+    Found 32-bit subtractor for signal <A[31]_B[31]_sub_3_OUT> created at line 38.
+    Found 32-bit adder for signal <A[31]_B[31]_add_6_OUT> created at line 55.
+    Found 32-bit 14-to-1 multiplexer for signal <Res> created at line 34.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <memstage>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/memstage.v".
+WARNING:Xst:647 - Input <ALU_MEM_Addr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ALU_MEM_Addr<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <memstage> synthesized.
+
+Synthesizing Unit <ram>.
+    Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ram.v".
+    Found 1024x32-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 32-bit register for signal <dout>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <ram> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 1024x32-bit single-port RAM                           : 1
+ 1024x32-bit single-port Read Only RAM                 : 1
+ 32x32-bit single-port Read Only RAM                   : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+# Registers                                            : 35
+ 32-bit register                                       : 35
+# Multiplexers                                         : 9
+ 32-bit 14-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 5
+ 32-bit 32-to-1 multiplexer                            : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <res_31> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_30> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_29> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_28> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_27> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_26> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_25> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_24> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_23> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_22> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_21> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_20> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_19> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_18> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_17> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_16> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_15> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_14> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_13> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_12> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_11> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_10> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_9> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_8> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_7> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_6> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_5> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_4> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_3> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_2> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_1> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <res_0> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <decoder>.
+INFO:Xst:3231 - The small RAM <Mram_res> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Awr>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <res>           |          |
+    -----------------------------------------------------------------------
+Unit <decoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ifstage>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <PC/res> prevents it from being combined with the RAM <memRom/Mram_ROM> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <PCout<11:2>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <memRom/Mram_ROM> will be implemented as a BLOCK RAM, absorbing the following register(s): <memRom/dout>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <PCout<11:2>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Instr>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ifstage> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ram>.
+INFO:Xst:3226 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <dout>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | no-change                           |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <din>           |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ram> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 1024x32-bit single-port block RAM                     : 1
+ 1024x32-bit single-port block Read Only RAM           : 1
+ 32x32-bit single-port distributed Read Only RAM       : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+# Registers                                            : 1056
+ Flip-Flops                                            : 1056
+# Multiplexers                                         : 9
+ 32-bit 14-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 5
+ 32-bit 32-to-1 multiplexer                            : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <PC/res_12> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_13> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_14> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_15> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_16> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_17> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_18> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_19> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_20> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_21> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_22> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_23> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_24> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_25> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_26> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_27> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_28> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_29> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_30> of sequential type is unconnected in block <ifstage>.
+WARNING:Xst:2677 - Node <PC/res_31> of sequential type is unconnected in block <ifstage>.
+
+Optimizing unit <register> ...
+
+Optimizing unit <datapath> ...
+
+Optimizing unit <ifstage> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <decstage> ...
+
+Optimizing unit <regfile> ...
+WARNING:Xst:1710 - FF/Latch <decs/RF/reg0/res_0> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_1> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_2> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_3> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_4> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_5> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_6> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_7> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_8> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_9> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_10> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_11> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_12> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_13> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_14> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_15> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_16> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_17> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_18> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_19> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_20> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_21> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_22> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_23> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_24> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_25> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_26> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_27> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_28> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_29> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_30> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <decs/RF/reg0/res_31> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block datapath, actual ratio is 7.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1004
+ Flip-Flops                                            : 1004
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : datapath.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1224
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 8
+#      LUT2                        : 14
+#      LUT3                        : 91
+#      LUT4                        : 35
+#      LUT5                        : 70
+#      LUT6                        : 771
+#      MUXCY                       : 82
+#      MUXF7                       : 64
+#      VCC                         : 1
+#      XORCY                       : 86
+# FlipFlops/Latches                : 1004
+#      FDE                         : 992
+#      FDRE                        : 12
+# RAMS                             : 4
+#      RAMB16BWER                  : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 120
+#      IBUF                        : 24
+#      OBUF                        : 96
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1004  out of  54576     1%  
+ Number of Slice LUTs:                  990  out of  27288     3%  
+    Number used as Logic:               990  out of  27288     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1916
+   Number with an unused Flip Flop:     912  out of   1916    47%  
+   Number with an unused LUT:           926  out of   1916    48%  
+   Number of fully used LUT-FF pairs:    78  out of   1916     4%  
+   Number of unique control sets:        32
+
+IO Utilization: 
+ Number of IOs:                         141
+ Number of bonded IOBs:                 121  out of    296    40%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                4  out of    116     3%  
+    Number using Block RAM only:          4
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 1008  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 10.221ns (Maximum Frequency: 97.841MHz)
+   Minimum input arrival time before clock: 9.622ns
+   Maximum output required time after clock: 12.910ns
+   Maximum combinational path delay: 12.311ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 10.221ns (frequency: 97.841MHz)
+  Total number of paths / destination ports: 6264043 / 2068
+-------------------------------------------------------------------------
+Delay:               10.221ns (Levels of Logic = 19)
+  Source:            ifs_memRom/Mram_ROM1 (RAM)
+  Destination:       mems/memRam/Mram_RAM2 (RAM)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: ifs_memRom/Mram_ROM1 to mems/memRam/Mram_RAM2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOPA0   45   1.850   1.477  ifs_memRom/Mram_ROM1 (Instr_16_OBUF)
+     LUT3:I2->O           19   0.205   1.176  decs/mux0/Mmux_res11_4 (decs/mux0/Mmux_res113)
+     LUT6:I4->O            1   0.203   0.827  decs/RF/mux2/Mmux_res_10 (decs/RF/mux2/Mmux_res_10)
+     LUT6:I2->O            1   0.203   0.000  decs/RF/mux2/Mmux_res_2_f7_G (N13)
+     MUXF7:I1->O           4   0.140   0.684  decs/RF/mux2/Mmux_res_2_f7 (rfb<0>)
+     LUT5:I4->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10>)
+     XORCY:CI->O           1   0.180   0.580  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_xor<11> (alus/alu/A[31]_B[31]_sub_3_OUT<11>)
+     LUT6:I5->O            2   0.205   0.721  alus/alu/Mmux_Res63 (alus/alu/Mmux_Res61)
+     LUT3:I1->O            3   0.203   0.650  alus/alu/Mmux_Res65 (ALU_Out_11_OBUF)
+     RAMB16BWER:ADDRA13        0.350          mems/memRam/Mram_RAM2
+    ----------------------------------------
+    Total                     10.221ns (4.106ns logic, 6.115ns route)
+                                       (40.2% logic, 59.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 767142 / 2080
+-------------------------------------------------------------------------
+Offset:              9.622ns (Levels of Logic = 20)
+  Source:            RF_B_sel (PAD)
+  Destination:       mems/memRam/Mram_RAM2 (RAM)
+  Destination Clock: Clk rising
+
+  Data Path: RF_B_sel to mems/memRam/Mram_RAM2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            31   1.222   1.506  RF_B_sel_IBUF (RF_B_sel_IBUF)
+     LUT3:I0->O           19   0.205   1.176  decs/mux0/Mmux_res11_4 (decs/mux0/Mmux_res113)
+     LUT6:I4->O            1   0.203   0.827  decs/RF/mux2/Mmux_res_10 (decs/RF/mux2/Mmux_res_10)
+     LUT6:I2->O            1   0.203   0.000  decs/RF/mux2/Mmux_res_2_f7_G (N13)
+     MUXF7:I1->O           4   0.140   0.684  decs/RF/mux2/Mmux_res_2_f7 (rfb<0>)
+     LUT5:I4->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10>)
+     XORCY:CI->O           1   0.180   0.580  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_xor<11> (alus/alu/A[31]_B[31]_sub_3_OUT<11>)
+     LUT6:I5->O            2   0.205   0.721  alus/alu/Mmux_Res63 (alus/alu/Mmux_Res61)
+     LUT3:I1->O            3   0.203   0.650  alus/alu/Mmux_Res65 (ALU_Out_11_OBUF)
+     RAMB16BWER:ADDRA13        0.350          mems/memRam/Mram_RAM2
+    ----------------------------------------
+    Total                      9.622ns (3.478ns logic, 6.144ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 199989 / 96
+-------------------------------------------------------------------------
+Offset:              12.910ns (Levels of Logic = 40)
+  Source:            ifs_memRom/Mram_ROM1 (RAM)
+  Destination:       ALU_Out<31> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: ifs_memRom/Mram_ROM1 to ALU_Out<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOPA0   45   1.850   1.477  ifs_memRom/Mram_ROM1 (Instr_16_OBUF)
+     LUT3:I2->O           19   0.205   1.176  decs/mux0/Mmux_res11_4 (decs/mux0/Mmux_res113)
+     LUT6:I4->O            1   0.203   0.827  decs/RF/mux2/Mmux_res_10 (decs/RF/mux2/Mmux_res_10)
+     LUT6:I2->O            1   0.203   0.000  decs/RF/mux2/Mmux_res_2_f7_G (N13)
+     MUXF7:I1->O           4   0.140   0.684  decs/RF/mux2/Mmux_res_2_f7 (rfb<0>)
+     LUT5:I4->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<11> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<12> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<13> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<14> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<15> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<16> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<17> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<18> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<19> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<20> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<21> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<22> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<23> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<24> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<25> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<26> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<27> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<28> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<29> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<30> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<30>)
+     XORCY:CI->O           1   0.180   0.580  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_xor<31> (alus/alu/A[31]_B[31]_sub_3_OUT<31>)
+     LUT6:I5->O            3   0.205   0.879  alus/alu/Mmux_Res502 (alus/alu/Mmux_Res502)
+     LUT3:I0->O            1   0.205   0.579  alus/alu/Mmux_Res503 (ALU_Out_31_OBUF)
+     OBUF:I->O                 2.571          ALU_Out_31_OBUF (ALU_Out<31>)
+    ----------------------------------------
+    Total                     12.910ns (6.709ns logic, 6.201ns route)
+                                       (52.0% logic, 48.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 24418 / 32
+-------------------------------------------------------------------------
+Delay:               12.311ns (Levels of Logic = 41)
+  Source:            RF_B_sel (PAD)
+  Destination:       ALU_Out<31> (PAD)
+
+  Data Path: RF_B_sel to ALU_Out<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            31   1.222   1.506  RF_B_sel_IBUF (RF_B_sel_IBUF)
+     LUT3:I0->O           19   0.205   1.176  decs/mux0/Mmux_res11_4 (decs/mux0/Mmux_res113)
+     LUT6:I4->O            1   0.203   0.827  decs/RF/mux2/Mmux_res_10 (decs/RF/mux2/Mmux_res_10)
+     LUT6:I2->O            1   0.203   0.000  decs/RF/mux2/Mmux_res_2_f7_G (N13)
+     MUXF7:I1->O           4   0.140   0.684  decs/RF/mux2/Mmux_res_2_f7 (rfb<0>)
+     LUT5:I4->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<11> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<12> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<13> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<14> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<15> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<16> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<17> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<18> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<19> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<20> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<21> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<22> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<23> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<24> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<25> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<26> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<27> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<28> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<29> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<30> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<30>)
+     XORCY:CI->O           1   0.180   0.580  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_xor<31> (alus/alu/A[31]_B[31]_sub_3_OUT<31>)
+     LUT6:I5->O            3   0.205   0.879  alus/alu/Mmux_Res502 (alus/alu/Mmux_Res502)
+     LUT3:I0->O            1   0.205   0.579  alus/alu/Mmux_Res503 (ALU_Out_31_OBUF)
+     OBUF:I->O                 2.571          ALU_Out_31_OBUF (ALU_Out<31>)
+    ----------------------------------------
+    Total                     12.311ns (6.081ns logic, 6.230ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |   10.221|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 20.45 secs
+ 
+--> 
+
+
+Total memory usage is 487576 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   87 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

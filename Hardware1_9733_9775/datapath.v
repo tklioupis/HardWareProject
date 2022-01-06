@@ -19,7 +19,6 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module datapath(
-    input [31:0] PC_Immed,
     input PC_Sel,
     input PC_LdEn,
     input Clk,
@@ -47,7 +46,7 @@ module datapath(
 	 
 	
 	
-	ifstage ifs(.PC_Immed(PC_Immed),.PC_sel(PC_Sel),.PC_LdEn(PC_LdEn),.Reset(Reset),.Clk(Clk),.Instr(instr));
+	ifstage ifs(.PC_Immed(immed),.PC_sel(PC_Sel),.PC_LdEn(PC_LdEn),.Reset(Reset),.Clk(Clk),.Instr(instr));
 	decstage decs(.Instr(instr),.RF_WrEn(RF_WrEn),.ALU_out(alu_out),.MEM_out(mem_out),.RF_WrData_sel(RF_WrData_sel),.RF_B_sel(RF_B_sel),.Clk(Clk),.Immed(immed),.RF_A(rfa),.RF_B(rfb));
 	alustage alus(.RF_A(rfa),.RF_B(rfb),.Immed(immed),.ALU_Bin_Sel(ALU_Bin_sel),.ALU_func(ALU_func),.ALU_out(alu_out));
 	memstage mems(.clk(Clk),.Mem_WrEn(Mem_WrEn),.ALU_MEM_Addr(alu_out),.MEM_DataIn(rfb),.MEM_DataOut(mem_out));

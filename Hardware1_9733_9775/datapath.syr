@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: datapath.prj
@@ -456,9 +456,9 @@ Optimizing unit <register> ...
 
 Optimizing unit <datapath> ...
 
-Optimizing unit <ifstage> ...
-
 Optimizing unit <alu> ...
+
+Optimizing unit <ifstage> ...
 
 Optimizing unit <decstage> ...
 
@@ -530,15 +530,15 @@ Top Level Output File Name         : datapath.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1224
+# BELS                             : 1239
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 8
-#      LUT2                        : 14
-#      LUT3                        : 91
-#      LUT4                        : 35
-#      LUT5                        : 70
-#      LUT6                        : 771
+#      LUT2                        : 4
+#      LUT3                        : 108
+#      LUT4                        : 47
+#      LUT5                        : 64
+#      LUT6                        : 773
 #      MUXCY                       : 82
 #      MUXF7                       : 64
 #      VCC                         : 1
@@ -550,8 +550,8 @@ Primitive and Black Box Usage:
 #      RAMB16BWER                  : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 120
-#      IBUF                        : 24
+# IO Buffers                       : 108
+#      IBUF                        : 12
 #      OBUF                        : 96
 
 Device utilization summary:
@@ -562,19 +562,19 @@ Selected Device : 6slx45tfgg484-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1004  out of  54576     1%  
- Number of Slice LUTs:                  990  out of  27288     3%  
-    Number used as Logic:               990  out of  27288     3%  
+ Number of Slice LUTs:                 1005  out of  27288     3%  
+    Number used as Logic:              1005  out of  27288     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1916
-   Number with an unused Flip Flop:     912  out of   1916    47%  
-   Number with an unused LUT:           926  out of   1916    48%  
-   Number of fully used LUT-FF pairs:    78  out of   1916     4%  
+ Number of LUT Flip Flop pairs used:   1933
+   Number with an unused Flip Flop:     929  out of   1933    48%  
+   Number with an unused LUT:           928  out of   1933    48%  
+   Number of fully used LUT-FF pairs:    76  out of   1933     3%  
    Number of unique control sets:        32
 
 IO Utilization: 
- Number of IOs:                         141
- Number of bonded IOBs:                 121  out of    296    40%  
+ Number of IOs:                         109
+ Number of bonded IOBs:                 109  out of    296    36%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                4  out of    116     3%  
@@ -613,10 +613,10 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 10.221ns (Maximum Frequency: 97.841MHz)
-   Minimum input arrival time before clock: 9.622ns
-   Maximum output required time after clock: 12.910ns
-   Maximum combinational path delay: 12.311ns
+   Minimum period: 10.048ns (Maximum Frequency: 99.520MHz)
+   Minimum input arrival time before clock: 9.492ns
+   Maximum output required time after clock: 12.738ns
+   Maximum combinational path delay: 12.182ns
 
 Timing Details:
 ---------------
@@ -624,10 +624,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 10.221ns (frequency: 97.841MHz)
-  Total number of paths / destination ports: 6264043 / 2068
+  Clock period: 10.048ns (frequency: 99.520MHz)
+  Total number of paths / destination ports: 6265007 / 2068
 -------------------------------------------------------------------------
-Delay:               10.221ns (Levels of Logic = 19)
+Delay:               10.048ns (Levels of Logic = 19)
   Source:            ifs_memRom/Mram_ROM1 (RAM)
   Destination:       mems/memRam/Mram_RAM2 (RAM)
   Source Clock:      Clk rising
@@ -637,36 +637,36 @@ Delay:               10.221ns (Levels of Logic = 19)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16BWER:CLKA->DOPA0   45   1.850   1.477  ifs_memRom/Mram_ROM1 (Instr_16_OBUF)
-     LUT3:I2->O           19   0.205   1.176  decs/mux0/Mmux_res11_4 (decs/mux0/Mmux_res113)
+     RAMB16BWER:CLKA->DOPA0   48   1.850   1.520  ifs_memRom/Mram_ROM1 (Instr_16_OBUF)
+     LUT3:I2->O           10   0.205   0.961  decs/mux0/Mmux_res11_12 (decs/mux0/Mmux_res11_4)
      LUT6:I4->O            1   0.203   0.827  decs/RF/mux2/Mmux_res_10 (decs/RF/mux2/Mmux_res_10)
      LUT6:I2->O            1   0.203   0.000  decs/RF/mux2/Mmux_res_2_f7_G (N13)
      MUXF7:I1->O           4   0.140   0.684  decs/RF/mux2/Mmux_res_2_f7 (rfb<0>)
-     LUT5:I4->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10>)
-     XORCY:CI->O           1   0.180   0.580  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_xor<11> (alus/alu/A[31]_B[31]_sub_3_OUT<11>)
-     LUT6:I5->O            2   0.205   0.721  alus/alu/Mmux_Res63 (alus/alu/Mmux_Res61)
+     LUT4:I3->O            1   0.205   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_lut<0> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<0> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<1> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<2> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<3> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<4> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<5> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<6> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<7> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<8> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<9> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<10> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<10>)
+     XORCY:CI->O           1   0.180   0.580  alus/alu/Madd_A[31]_B[31]_add_6_OUT_xor<11> (alus/alu/A[31]_B[31]_add_6_OUT<11>)
+     LUT6:I5->O            2   0.205   0.721  alus/alu/Mmux_Res61 (alus/alu/Mmux_Res6)
      LUT3:I1->O            3   0.203   0.650  alus/alu/Mmux_Res65 (ALU_Out_11_OBUF)
      RAMB16BWER:ADDRA13        0.350          mems/memRam/Mram_RAM2
     ----------------------------------------
-    Total                     10.221ns (4.106ns logic, 6.115ns route)
-                                       (40.2% logic, 59.8% route)
+    Total                     10.048ns (4.106ns logic, 5.942ns route)
+                                       (40.9% logic, 59.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 767142 / 2080
+  Total number of paths / destination ports: 766998 / 2080
 -------------------------------------------------------------------------
-Offset:              9.622ns (Levels of Logic = 20)
+Offset:              9.492ns (Levels of Logic = 20)
   Source:            RF_B_sel (PAD)
   Destination:       mems/memRam/Mram_RAM2 (RAM)
   Destination Clock: Clk rising
@@ -675,36 +675,36 @@ Offset:              9.622ns (Levels of Logic = 20)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            31   1.222   1.506  RF_B_sel_IBUF (RF_B_sel_IBUF)
-     LUT3:I0->O           19   0.205   1.176  decs/mux0/Mmux_res11_4 (decs/mux0/Mmux_res113)
+     IBUF:I->O            37   1.222   1.591  RF_B_sel_IBUF (RF_B_sel_IBUF)
+     LUT3:I0->O           10   0.205   0.961  decs/mux0/Mmux_res11_12 (decs/mux0/Mmux_res11_4)
      LUT6:I4->O            1   0.203   0.827  decs/RF/mux2/Mmux_res_10 (decs/RF/mux2/Mmux_res_10)
      LUT6:I2->O            1   0.203   0.000  decs/RF/mux2/Mmux_res_2_f7_G (N13)
      MUXF7:I1->O           4   0.140   0.684  decs/RF/mux2/Mmux_res_2_f7 (rfb<0>)
-     LUT5:I4->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10>)
-     XORCY:CI->O           1   0.180   0.580  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_xor<11> (alus/alu/A[31]_B[31]_sub_3_OUT<11>)
-     LUT6:I5->O            2   0.205   0.721  alus/alu/Mmux_Res63 (alus/alu/Mmux_Res61)
+     LUT4:I3->O            1   0.205   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_lut<0> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<0> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<1> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<2> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<3> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<4> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<5> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<6> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<7> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<8> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<9> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<10> (alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<10>)
+     XORCY:CI->O           1   0.180   0.580  alus/alu/Madd_A[31]_B[31]_add_6_OUT_xor<11> (alus/alu/A[31]_B[31]_add_6_OUT<11>)
+     LUT6:I5->O            2   0.205   0.721  alus/alu/Mmux_Res61 (alus/alu/Mmux_Res6)
      LUT3:I1->O            3   0.203   0.650  alus/alu/Mmux_Res65 (ALU_Out_11_OBUF)
      RAMB16BWER:ADDRA13        0.350          mems/memRam/Mram_RAM2
     ----------------------------------------
-    Total                      9.622ns (3.478ns logic, 6.144ns route)
-                                       (36.1% logic, 63.9% route)
+    Total                      9.492ns (3.478ns logic, 6.014ns route)
+                                       (36.6% logic, 63.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
   Total number of paths / destination ports: 199989 / 96
 -------------------------------------------------------------------------
-Offset:              12.910ns (Levels of Logic = 40)
+Offset:              12.738ns (Levels of Logic = 40)
   Source:            ifs_memRom/Mram_ROM1 (RAM)
   Destination:       ALU_Out<31> (PAD)
   Source Clock:      Clk rising
@@ -713,12 +713,12 @@ Offset:              12.910ns (Levels of Logic = 40)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16BWER:CLKA->DOPA0   45   1.850   1.477  ifs_memRom/Mram_ROM1 (Instr_16_OBUF)
-     LUT3:I2->O           19   0.205   1.176  decs/mux0/Mmux_res11_4 (decs/mux0/Mmux_res113)
+     RAMB16BWER:CLKA->DOPA0   48   1.850   1.520  ifs_memRom/Mram_ROM1 (Instr_16_OBUF)
+     LUT3:I2->O           10   0.205   0.961  decs/mux0/Mmux_res11_12 (decs/mux0/Mmux_res11_4)
      LUT6:I4->O            1   0.203   0.827  decs/RF/mux2/Mmux_res_10 (decs/RF/mux2/Mmux_res_10)
      LUT6:I2->O            1   0.203   0.000  decs/RF/mux2/Mmux_res_2_f7_G (N13)
      MUXF7:I1->O           4   0.140   0.684  decs/RF/mux2/Mmux_res_2_f7 (rfb<0>)
-     LUT5:I4->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
+     LUT4:I3->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
      MUXCY:S->O            1   0.172   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1>)
      MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
@@ -755,14 +755,14 @@ Offset:              12.910ns (Levels of Logic = 40)
      LUT3:I0->O            1   0.205   0.579  alus/alu/Mmux_Res503 (ALU_Out_31_OBUF)
      OBUF:I->O                 2.571          ALU_Out_31_OBUF (ALU_Out<31>)
     ----------------------------------------
-    Total                     12.910ns (6.709ns logic, 6.201ns route)
-                                       (52.0% logic, 48.0% route)
+    Total                     12.738ns (6.709ns logic, 6.029ns route)
+                                       (52.7% logic, 47.3% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 24418 / 32
 -------------------------------------------------------------------------
-Delay:               12.311ns (Levels of Logic = 41)
+Delay:               12.182ns (Levels of Logic = 41)
   Source:            RF_B_sel (PAD)
   Destination:       ALU_Out<31> (PAD)
 
@@ -770,12 +770,12 @@ Delay:               12.311ns (Levels of Logic = 41)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            31   1.222   1.506  RF_B_sel_IBUF (RF_B_sel_IBUF)
-     LUT3:I0->O           19   0.205   1.176  decs/mux0/Mmux_res11_4 (decs/mux0/Mmux_res113)
+     IBUF:I->O            37   1.222   1.591  RF_B_sel_IBUF (RF_B_sel_IBUF)
+     LUT3:I0->O           10   0.205   0.961  decs/mux0/Mmux_res11_12 (decs/mux0/Mmux_res11_4)
      LUT6:I4->O            1   0.203   0.827  decs/RF/mux2/Mmux_res_10 (decs/RF/mux2/Mmux_res_10)
      LUT6:I2->O            1   0.203   0.000  decs/RF/mux2/Mmux_res_2_f7_G (N13)
      MUXF7:I1->O           4   0.140   0.684  decs/RF/mux2/Mmux_res_2_f7 (rfb<0>)
-     LUT5:I4->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
+     LUT4:I3->O            1   0.205   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
      MUXCY:S->O            1   0.172   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1>)
      MUXCY:CI->O           1   0.019   0.000  alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
@@ -812,8 +812,8 @@ Delay:               12.311ns (Levels of Logic = 41)
      LUT3:I0->O            1   0.205   0.579  alus/alu/Mmux_Res503 (ALU_Out_31_OBUF)
      OBUF:I->O                 2.571          ALU_Out_31_OBUF (ALU_Out<31>)
     ----------------------------------------
-    Total                     12.311ns (6.081ns logic, 6.230ns route)
-                                       (49.4% logic, 50.6% route)
+    Total                     12.182ns (6.081ns logic, 6.101ns route)
+                                       (49.9% logic, 50.1% route)
 
 =========================================================================
 
@@ -825,19 +825,19 @@ Clock to Setup on destination clock Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |   10.221|         |         |         |
+Clk            |   10.048|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 24.00 secs
-Total CPU time to Xst completion: 20.45 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 20.54 secs
  
 --> 
 
 
-Total memory usage is 487576 kilobytes
+Total memory usage is 487552 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   87 (   0 filtered)

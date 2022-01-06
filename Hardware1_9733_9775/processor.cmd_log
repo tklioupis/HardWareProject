@@ -2,3 +2,4 @@ xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/p
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.syr" 
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.syr" 
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.syr" 

@@ -22,6 +22,7 @@ module control(
 	input [31:0] Instr,
 	input [31:0] MEM_Out,
 	input [31:0] ALU_Out,
+	input Clk,
    output PC_Sel,
    output PC_LdEn,
    output Reset,
@@ -33,6 +34,8 @@ module control(
    output Mem_WrEn
     );
 	 
+	reg [31:0] rInstr;
+	reg [31:0] rALU_Out;
 	reg [5:0] opcode;
    reg rPC_Sel;
    reg rPC_LdEn;
@@ -43,7 +46,7 @@ module control(
    reg rALU_Bin_sel;
 	reg [3:0] rALU_func;
    reg rMem_WrEn;
-	
+		
 	assign PC_Sel = rPC_Sel;
 	assign PC_LdEn = rPC_LdEn;
 	assign Reset = rReset;
@@ -54,15 +57,17 @@ module control(
 	assign ALU_func = rALU_func;
 	assign Mem_WrEn = rMem_WrEn;
 	
-	always@(*)
+	always@(posedge Clk)
 	begin
 		opcode <= Instr[31:26];
+		rInstr <= Instr;
+		rALU_Out <= ALU_Out;
 	end
 	
-	initial rReset = 1'b0;
+	initial begin rReset = 1'b1; end
 	
 	
-	always @(opcode) 
+	always @(posedge Clk) 
 	begin
 		case(opcode)
 			6'b100000: //alu functions
@@ -74,7 +79,7 @@ module control(
 				rRF_WrData_sel = 1;
 				rRF_B_sel = 0;
 				rALU_Bin_sel =0;
-				rALU_func = Instr[3:0];
+				rALU_func = rInstr[3:0];
 				rMem_WrEn = 0;
 			end
 			6'b001111: //lw
@@ -118,7 +123,7 @@ module control(
 				rRF_B_sel = 1;
 				rALU_Bin_sel = 0;
 				rALU_func = 1;
-				if (ALU_Out == 0)				
+				if (rALU_Out == 0)				
 					rPC_Sel = 1;
 				else
 					rPC_Sel = 0;
@@ -133,7 +138,7 @@ module control(
 				rRF_B_sel = 1;
 				rALU_Bin_sel = 0;
 				rALU_func = 1;
-				if (ALU_Out != 0)				
+				if (rALU_Out != 0)				
 					rPC_Sel = 1;
 				else
 					rPC_Sel = 0;

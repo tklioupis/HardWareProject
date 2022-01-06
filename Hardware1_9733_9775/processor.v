@@ -42,8 +42,7 @@ module processor(
 	datapath datap(.PC_Sel(wPC_Sel),.PC_LdEn(wPC_LdEn),.Clk(Clk),.Reset(wReset),.RF_WrEn(wRF_WrEnv),.RF_WrData_sel(wRF_WrData_sel),
 						.RF_B_sel(wRF_B_sel),.ALU_Bin_sel(wALU_Bin_sel),.ALU_func(wALU_func),.Mem_WrEn(wMem_WrEn),
 						.Instr(wInstr),.MEM_Out(wMEM_Out),.ALU_Out(wALU_Out));
-	control ctrl(.PC_Sel(wPC_Sel),.PC_LdEn(wPC_LdEn),.Reset(wReset),.RF_WrEn(wRF_WrEnv),.RF_WrData_sel(wRF_WrData_sel),
-						.RF_B_sel(wRF_B_sel),.ALU_Bin_sel(wALU_Bin_sel),.ALU_func(wALU_func),.Mem_WrEn(wMem_WrEn),
-						.Instr(wInstr),.MEM_Out(wMEM_Out),.ALU_Out(wALU_Out));
-
+	control ctrl(.Instr(wInstr),.MEM_Out(wMEM_Out),.ALU_Out(wALU_Out),.Clk(Clk),.PC_Sel(wPC_Sel),
+					 .PC_LdEn(wPC_LdEn),.Reset(wReset),.RF_WrEn(wRF_WrEnv),.RF_WrData_sel(wRF_WrData_sel),
+					 .RF_B_sel(wRF_B_sel),.ALU_Bin_sel(wALU_Bin_sel),.ALU_func(wALU_func),.Mem_WrEn(wMem_WrEn));
 endmodule

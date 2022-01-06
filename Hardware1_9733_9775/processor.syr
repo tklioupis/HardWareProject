@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: processor.prj
@@ -181,9 +181,6 @@ Elaborating module <memstage>.
 Elaborating module <ram>.
 
 Elaborating module <control>.
-WARNING:HDLCompiler:91 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/control.v" Line 77: Signal <Instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/control.v" Line 121: Signal <ALU_Out> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/control.v" Line 136: Signal <ALU_Out> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -309,18 +306,19 @@ Synthesizing Unit <control>.
     Related source file is "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/control.v".
 WARNING:Xst:647 - Input <Instr<25:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <MEM_Out> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:737 - Found 1-bit latch for signal <rRF_WrEn>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <rRF_WrData_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <rRF_B_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <rALU_Bin_sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <rALU_func<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <rALU_func<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <rALU_func<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <rALU_func<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <rMem_WrEn>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <rPC_Sel>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit register for signal <rInstr<3:0>>.
+    Found 32-bit register for signal <rALU_Out>.
+    Found 1-bit register for signal <rPC_Sel>.
+    Found 1-bit register for signal <rReset>.
+    Found 1-bit register for signal <rRF_WrEn>.
+    Found 1-bit register for signal <rRF_WrData_sel>.
+    Found 1-bit register for signal <rRF_B_sel>.
+    Found 1-bit register for signal <rALU_Bin_sel>.
+    Found 4-bit register for signal <rALU_func>.
+    Found 1-bit register for signal <rMem_WrEn>.
+    Found 6-bit register for signal <opcode>.
     Summary:
-	inferred  10 Latch(s).
+	inferred  53 D-type flip-flop(s).
 	inferred   6 Multiplexer(s).
 Unit <control> synthesized.
 
@@ -335,15 +333,16 @@ Macro Statistics
 # Adders/Subtractors                                   : 4
  32-bit adder                                          : 3
  32-bit subtractor                                     : 1
-# Registers                                            : 35
- 32-bit register                                       : 35
-# Latches                                              : 10
- 1-bit latch                                           : 10
+# Registers                                            : 46
+ 1-bit register                                        : 7
+ 32-bit register                                       : 36
+ 4-bit register                                        : 2
+ 6-bit register                                        : 1
 # Multiplexers                                         : 15
- 1-bit 2-to-1 multiplexer                              : 6
  32-bit 14-to-1 multiplexer                            : 1
  32-bit 2-to-1 multiplexer                             : 5
  32-bit 32-to-1 multiplexer                            : 2
+ 4-bit 2-to-1 multiplexer                              : 6
  5-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -457,13 +456,13 @@ Macro Statistics
 # Adders/Subtractors                                   : 4
  32-bit adder                                          : 3
  32-bit subtractor                                     : 1
-# Registers                                            : 1056
- Flip-Flops                                            : 1056
+# Registers                                            : 1109
+ Flip-Flops                                            : 1109
 # Multiplexers                                         : 15
- 1-bit 2-to-1 multiplexer                              : 6
  32-bit 14-to-1 multiplexer                            : 1
  32-bit 2-to-1 multiplexer                             : 5
  32-bit 32-to-1 multiplexer                            : 2
+ 4-bit 2-to-1 multiplexer                              : 6
  5-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -543,7 +542,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <datap/decs/RF/reg0/
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block processor, actual ratio is 7.
-Latch ctrl/rRF_B_sel has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -551,8 +549,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1004
- Flip-Flops                                            : 1004
+# Registers                                            : 1056
+ Flip-Flops                                            : 1056
 
 =========================================================================
 
@@ -575,23 +573,23 @@ Top Level Output File Name         : processor.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1250
+# BELS                             : 1265
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 8
-#      LUT2                        : 4
-#      LUT3                        : 104
-#      LUT4                        : 49
-#      LUT5                        : 58
-#      LUT6                        : 791
+#      LUT2                        : 5
+#      LUT3                        : 109
+#      LUT4                        : 50
+#      LUT5                        : 66
+#      LUT6                        : 792
 #      MUXCY                       : 82
-#      MUXF7                       : 65
+#      MUXF7                       : 64
 #      VCC                         : 1
 #      XORCY                       : 86
-# FlipFlops/Latches                : 1014
+# FlipFlops/Latches                : 1056
+#      FD                          : 52
 #      FDE                         : 992
 #      FDRE                        : 12
-#      LD                          : 10
 # RAMS                             : 4
 #      RAMB16BWER                  : 4
 # Clock Buffers                    : 1
@@ -606,15 +604,15 @@ Selected Device : 6slx45tfgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1014  out of  54576     1%  
- Number of Slice LUTs:                 1015  out of  27288     3%  
-    Number used as Logic:              1015  out of  27288     3%  
+ Number of Slice Registers:            1056  out of  54576     1%  
+ Number of Slice LUTs:                 1031  out of  27288     3%  
+    Number used as Logic:              1031  out of  27288     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1969
-   Number with an unused Flip Flop:     955  out of   1969    48%  
-   Number with an unused LUT:           954  out of   1969    48%  
-   Number of fully used LUT-FF pairs:    60  out of   1969     3%  
+ Number of LUT Flip Flop pairs used:   1982
+   Number with an unused Flip Flop:     926  out of   1982    46%  
+   Number with an unused LUT:           951  out of   1982    47%  
+   Number of fully used LUT-FF pairs:   105  out of   1982     5%  
    Number of unique control sets:        33
 
 IO Utilization: 
@@ -644,16 +642,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------------------------------+--------------------------+-------+
-Clock Signal                                                               | Clock buffer(FF name)    | Load  |
----------------------------------------------------------------------------+--------------------------+-------+
-Clk                                                                        | BUFGP                    | 1008  |
-ctrl/opcode[5]_PWR_24_o_Select_43_o(ctrl/opcode[5]_PWR_24_o_Select_43_o1:O)| NONE(*)(ctrl/rALU_func_0)| 10    |
----------------------------------------------------------------------------+--------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 1060  |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -663,9 +656,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 10.201ns (Maximum Frequency: 98.026MHz)
+   Minimum period: 10.052ns (Maximum Frequency: 99.481MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 12.763ns
+   Maximum output required time after clock: 12.621ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -674,10 +667,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 10.201ns (frequency: 98.026MHz)
-  Total number of paths / destination ports: 6265007 / 2068
+  Clock period: 10.052ns (frequency: 99.481MHz)
+  Total number of paths / destination ports: 7256634 / 2132
 -------------------------------------------------------------------------
-Delay:               10.201ns (Levels of Logic = 14)
+Delay:               10.052ns (Levels of Logic = 19)
   Source:            datap/ifs_memRom/Mram_ROM1 (RAM)
   Destination:       datap/mems/memRam/Mram_RAM2 (RAM)
   Source Clock:      Clk rising
@@ -687,142 +680,36 @@ Delay:               10.201ns (Levels of Logic = 14)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16BWER:CLKA->DOPA0   45   1.850   1.477  datap/ifs_memRom/Mram_ROM1 (wInstr<16>)
-     LUT3:I2->O           21   0.205   1.218  datap/decs/mux0/Mmux_res11_4 (datap/decs/mux0/Mmux_res113)
-     LUT6:I4->O            1   0.203   0.827  datap/decs/RF/mux2/Mmux_res_1027 (datap/decs/RF/mux2/Mmux_res_1027)
-     LUT6:I2->O            1   0.203   0.000  datap/decs/RF/mux2/Mmux_res_2_f7_26_G (N45)
-     MUXF7:I1->O           4   0.140   0.684  datap/decs/RF/mux2/Mmux_res_2_f7_26 (datap/rfb<5>)
-     LUT6:I5->O            1   0.205   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_lut<5> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_lut<5>)
-     MUXCY:S->O            1   0.172   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<5> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<5>)
+     RAMB16BWER:CLKA->DOPA0   46   1.850   1.491  datap/ifs_memRom/Mram_ROM1 (wInstr<16>)
+     LUT3:I2->O           10   0.205   0.961  datap/decs/mux0/Mmux_res11_11 (datap/decs/mux0/Mmux_res11_4)
+     LUT6:I4->O            1   0.203   0.827  datap/decs/RF/mux2/Mmux_res_10 (datap/decs/RF/mux2/Mmux_res_10)
+     LUT6:I2->O            1   0.203   0.000  datap/decs/RF/mux2/Mmux_res_2_f7_G (N15)
+     MUXF7:I1->O           4   0.140   0.684  datap/decs/RF/mux2/Mmux_res_2_f7 (datap/rfb<0>)
+     LUT4:I3->O            1   0.205   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_lut<0> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<0> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<1> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<2> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<3> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<4> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<5> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<5>)
      MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<6> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<6>)
      MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<7> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<7>)
      MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<8> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<8>)
      MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<9> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<9>)
      MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<10> (datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_cy<10>)
      XORCY:CI->O           1   0.180   0.580  datap/alus/alu/Madd_A[31]_B[31]_add_6_OUT_xor<11> (datap/alus/alu/A[31]_B[31]_add_6_OUT<11>)
-     LUT6:I5->O            3   0.205   0.755  datap/alus/alu/Mmux_Res61 (datap/alus/alu/Mmux_Res6)
-     LUT3:I1->O            3   0.203   0.650  datap/alus/alu/Mmux_Res65 (ALU_Out_11_OBUF)
+     LUT6:I5->O            2   0.205   0.721  datap/alus/alu/Mmux_Res61 (datap/alus/alu/Mmux_Res6)
+     LUT3:I1->O            4   0.203   0.683  datap/alus/alu/Mmux_Res65 (ALU_Out_11_OBUF)
      RAMB16BWER:ADDRA13        0.350          datap/mems/memRam/Mram_RAM2
     ----------------------------------------
-    Total                     10.201ns (4.011ns logic, 6.190ns route)
-                                       (39.3% logic, 60.7% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'ctrl/opcode[5]_PWR_24_o_Select_43_o'
-  Clock period: 9.826ns (frequency: 101.766MHz)
-  Total number of paths / destination ports: 26065 / 1
--------------------------------------------------------------------------
-Delay:               9.826ns (Levels of Logic = 34)
-  Source:            ctrl/rRF_B_sel_1 (LATCH)
-  Destination:       ctrl/rPC_Sel (LATCH)
-  Source Clock:      ctrl/opcode[5]_PWR_24_o_Select_43_o falling
-  Destination Clock: ctrl/opcode[5]_PWR_24_o_Select_43_o falling
-
-  Data Path: ctrl/rRF_B_sel_1 to ctrl/rPC_Sel
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q              12   0.498   1.137  ctrl/rRF_B_sel_1 (ctrl/rRF_B_sel_1)
-     LUT3:I0->O           22   0.205   1.134  datap/decs/mux0/Mmux_res21_4 (datap/decs/mux0/Mmux_res213)
-     LUT6:I5->O            1   0.205   0.808  datap/decs/RF/mux2/Mmux_res_867 (datap/decs/RF/mux2/Mmux_res_867)
-     LUT6:I3->O            1   0.205   0.000  datap/decs/RF/mux2/Mmux_res_2_f7_21_F (N38)
-     MUXF7:I0->O           4   0.131   0.684  datap/decs/RF/mux2/Mmux_res_2_f7_21 (datap/rfb<2>)
-     LUT6:I5->O            1   0.205   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<2> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<2>)
-     MUXCY:S->O            1   0.172   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<11> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<12> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<13> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<14> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<15> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<15>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<16> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<16>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<17> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<18> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<19> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<19>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<20> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<20>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<21> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<21>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<22> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<22>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<23> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<23>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<24> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<24>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<25> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<25>)
-     XORCY:CI->O           1   0.180   0.580  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_xor<26> (datap/alus/alu/A[31]_B[31]_sub_3_OUT<26>)
-     LUT6:I5->O            2   0.205   0.721  datap/alus/alu/Mmux_Res382 (datap/alus/alu/Mmux_Res381)
-     LUT3:I1->O            2   0.203   0.845  datap/alus/alu/Mmux_Res383 (ALU_Out_26_OBUF)
-     LUT6:I3->O            1   0.205   0.827  ctrl/opcode[5]_GND_17_o_Select_32_o7 (ctrl/opcode[5]_GND_17_o_Select_32_o8)
-     LUT6:I2->O            1   0.203   0.000  ctrl/opcode[5]_GND_17_o_Select_32_o10 (ctrl/opcode[5]_GND_17_o_Select_32_o)
-     LD:D                      0.037          ctrl/rPC_Sel
-    ----------------------------------------
-    Total                      9.826ns (3.091ns logic, 6.735ns route)
-                                       (31.5% logic, 68.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ctrl/opcode[5]_PWR_24_o_Select_43_o'
-  Total number of paths / destination ports: 24418 / 32
--------------------------------------------------------------------------
-Offset:              11.021ns (Levels of Logic = 38)
-  Source:            ctrl/rRF_B_sel_1 (LATCH)
-  Destination:       ALU_Out<31> (PAD)
-  Source Clock:      ctrl/opcode[5]_PWR_24_o_Select_43_o falling
-
-  Data Path: ctrl/rRF_B_sel_1 to ALU_Out<31>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q              12   0.498   1.137  ctrl/rRF_B_sel_1 (ctrl/rRF_B_sel_1)
-     LUT3:I0->O           22   0.205   1.134  datap/decs/mux0/Mmux_res21_4 (datap/decs/mux0/Mmux_res213)
-     LUT6:I5->O            1   0.205   0.808  datap/decs/RF/mux2/Mmux_res_867 (datap/decs/RF/mux2/Mmux_res_867)
-     LUT6:I3->O            1   0.205   0.000  datap/decs/RF/mux2/Mmux_res_2_f7_21_F (N38)
-     MUXF7:I0->O           4   0.131   0.684  datap/decs/RF/mux2/Mmux_res_2_f7_21 (datap/rfb<2>)
-     LUT6:I5->O            1   0.205   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<2> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<2>)
-     MUXCY:S->O            1   0.172   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<11> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<12> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<13> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<14> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<15> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<15>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<16> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<16>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<17> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<18> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<19> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<19>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<20> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<20>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<21> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<21>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<22> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<22>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<23> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<23>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<24> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<24>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<25> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<25>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<26> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<26>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<27> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<27>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<28> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<28>)
-     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<29> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<29>)
-     MUXCY:CI->O           0   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<30> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<30>)
-     XORCY:CI->O           1   0.180   0.580  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_xor<31> (datap/alus/alu/A[31]_B[31]_sub_3_OUT<31>)
-     LUT6:I5->O            4   0.205   0.788  datap/alus/alu/Mmux_Res502 (datap/alus/alu/Mmux_Res502)
-     LUT3:I1->O            1   0.203   0.579  datap/alus/alu/Mmux_Res503 (ALU_Out_31_OBUF)
-     OBUF:I->O                 2.571          ALU_Out_31_OBUF (ALU_Out<31>)
-    ----------------------------------------
-    Total                     11.021ns (5.312ns logic, 5.708ns route)
-                                       (48.2% logic, 51.8% route)
+    Total                     10.052ns (4.106ns logic, 5.946ns route)
+                                       (40.8% logic, 59.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 199957 / 64
+  Total number of paths / destination ports: 224375 / 64
 -------------------------------------------------------------------------
-Offset:              12.763ns (Levels of Logic = 35)
+Offset:              12.621ns (Levels of Logic = 40)
   Source:            datap/ifs_memRom/Mram_ROM1 (RAM)
   Destination:       ALU_Out<31> (PAD)
   Source Clock:      Clk rising
@@ -831,13 +718,18 @@ Offset:              12.763ns (Levels of Logic = 35)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16BWER:CLKA->DOPA0   45   1.850   1.477  datap/ifs_memRom/Mram_ROM1 (wInstr<16>)
-     LUT3:I2->O           21   0.205   1.218  datap/decs/mux0/Mmux_res11_4 (datap/decs/mux0/Mmux_res113)
-     LUT6:I4->O            1   0.203   0.827  datap/decs/RF/mux2/Mmux_res_1027 (datap/decs/RF/mux2/Mmux_res_1027)
-     LUT6:I2->O            1   0.203   0.000  datap/decs/RF/mux2/Mmux_res_2_f7_26_G (N45)
-     MUXF7:I1->O           4   0.140   0.684  datap/decs/RF/mux2/Mmux_res_2_f7_26 (datap/rfb<5>)
-     LUT6:I5->O            1   0.205   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<5> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<5>)
-     MUXCY:S->O            1   0.172   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
+     RAMB16BWER:CLKA->DOPA0   46   1.850   1.491  datap/ifs_memRom/Mram_ROM1 (wInstr<16>)
+     LUT3:I2->O           10   0.205   0.961  datap/decs/mux0/Mmux_res11_11 (datap/decs/mux0/Mmux_res11_4)
+     LUT6:I4->O            1   0.203   0.827  datap/decs/RF/mux2/Mmux_res_10 (datap/decs/RF/mux2/Mmux_res_10)
+     LUT6:I2->O            1   0.203   0.000  datap/decs/RF/mux2/Mmux_res_2_f7_G (N15)
+     MUXF7:I1->O           4   0.140   0.684  datap/decs/RF/mux2/Mmux_res_2_f7 (datap/rfb<0>)
+     LUT4:I3->O            1   0.205   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<5>)
      MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<6>)
      MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<7>)
      MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<8>)
@@ -864,12 +756,12 @@ Offset:              12.763ns (Levels of Logic = 35)
      MUXCY:CI->O           1   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<29> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<29>)
      MUXCY:CI->O           0   0.019   0.000  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<30> (datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_cy<30>)
      XORCY:CI->O           1   0.180   0.580  datap/alus/alu/Msub_A[31]_B[31]_sub_3_OUT_xor<31> (datap/alus/alu/A[31]_B[31]_sub_3_OUT<31>)
-     LUT6:I5->O            4   0.205   0.788  datap/alus/alu/Mmux_Res502 (datap/alus/alu/Mmux_Res502)
-     LUT3:I1->O            1   0.203   0.579  datap/alus/alu/Mmux_Res503 (ALU_Out_31_OBUF)
+     LUT6:I5->O            3   0.205   0.755  datap/alus/alu/Mmux_Res502 (datap/alus/alu/Mmux_Res502)
+     LUT3:I1->O            2   0.203   0.616  datap/alus/alu/Mmux_Res503 (ALU_Out_31_OBUF)
      OBUF:I->O                 2.571          ALU_Out_31_OBUF (ALU_Out<31>)
     ----------------------------------------
-    Total                     12.763ns (6.612ns logic, 6.151ns route)
-                                       (51.8% logic, 48.2% route)
+    Total                     12.621ns (6.707ns logic, 5.914ns route)
+                                       (53.1% logic, 46.9% route)
 
 =========================================================================
 
@@ -877,35 +769,25 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock Clk
------------------------------------+---------+---------+---------+---------+
-                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------------+---------+---------+---------+---------+
-Clk                                |   10.201|         |         |         |
-ctrl/opcode[5]_PWR_24_o_Select_43_o|         |    8.459|         |         |
------------------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock ctrl/opcode[5]_PWR_24_o_Select_43_o
------------------------------------+---------+---------+---------+---------+
-                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------------+---------+---------+---------+---------+
-Clk                                |         |         |   11.569|         |
-ctrl/opcode[5]_PWR_24_o_Select_43_o|         |         |    9.826|         |
------------------------------------+---------+---------+---------+---------+
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |   10.052|         |         |         |
+---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 23.18 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 20.04 secs
  
 --> 
 
 
-Total memory usage is 487964 kilobytes
+Total memory usage is 488036 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  104 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   91 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

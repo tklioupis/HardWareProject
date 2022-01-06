@@ -31,6 +31,7 @@ module ifstage(
 	 reg [31:0] PCplus4;
 	 reg [31:0] adder;
 	 
+	 
 	 mux2to1 mux0(.Din0(PCplus4),.Din1(adder),.Sel(PC_sel),.Dout(muxOut));
 	 PCregister PC(.Data(muxOut),.CLK(Clk),.WE(PC_LdEn),.reset(Reset),.Dout(PCout));
 	 

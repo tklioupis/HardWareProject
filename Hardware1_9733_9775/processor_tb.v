@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   17:44:35 01/06/2022
+// Create Date:   18:46:10 01/06/2022
 // Design Name:   processor
 // Module Name:   /home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor_tb.v
 // Project Name:  Hardware1_9733_9775
@@ -41,26 +41,27 @@ module processor_tb;
 	initial begin
 		// Initialize Inputs
 		Clk = 0;
-		#200;
+		#100;
 		Clk = 1;
-		#200;
+		#100;
 		Clk = 0;
-		#200;
+		#100;
 		Clk = 1;
-		#200;
+		#100;
 		Clk = 0;
-		#200;
+		#100;
 		Clk = 1;
-		#200;
+		#100;
 		Clk = 0;
-		#200;
+		#100;
 		Clk = 1;
-		#200;
+		#100;
 		Clk = 0;
-		#200;
+		#100;
 		Clk = 1;
-		#200;
-
+		#100;
+		Clk = 0;
+		#100;
 		// Wait 100 ns for global reset to finish
         
 		// Add stimulus here

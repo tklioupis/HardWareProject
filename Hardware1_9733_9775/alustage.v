@@ -24,11 +24,12 @@ module alustage(
     input [31:0] Immed,
     input ALU_Bin_Sel,
     input [3:0] ALU_func,
-    output [31:0] ALU_out
+    output [31:0] ALU_out,
+	 output Zero
     );
 
 	wire [31:0] muxout;
 	mux2to1 mux (.Din0(RF_B),.Din1(Immed),.Sel(ALU_Bin_Sel),.Dout(muxout));
-	alu alu(.A(RF_A),.B(muxout),.Op(ALU_func),.Out(ALU_out),.Zero());
+	alu alu(.A(RF_A),.B(muxout),.Op(ALU_func),.Out(ALU_out),.Zero(Zero));
 
 endmodule

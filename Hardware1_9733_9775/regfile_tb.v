@@ -50,6 +50,8 @@ module regfile_tb;
 
 	initial begin
 		// Initialize Inputs
+		Clk = 0;
+		#100;
 		Ard1 = 0;
 		Ard2 = 0;
 		Awr = 0;
@@ -57,17 +59,11 @@ module regfile_tb;
 		WrEn = 1;
 		Clk = 1;
 		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
 		Ard1 = 15;
 		Ard2 = 0;
 		Awr = 15;
 		Din = 22;
 		WrEn = 1;
-		Clk = 1;
-		#100;
 		Clk = 0;
 		#100;
 		Clk = 1;

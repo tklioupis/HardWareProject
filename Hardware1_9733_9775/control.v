@@ -20,9 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 module control(
 	input [31:0] Instr,
-	input [31:0] MEM_Out,
-	input [31:0] ALU_Out,
 	input Clk,
+	input Zero,
    output PC_Sel,
    output PC_LdEn,
    output Reset,
@@ -35,7 +34,6 @@ module control(
     );
 	 
 	reg [31:0] rInstr;
-	reg [31:0] rALU_Out;
 	reg [5:0] opcode;
    reg rPC_Sel;
    reg rPC_LdEn;
@@ -57,17 +55,16 @@ module control(
 	assign ALU_func = rALU_func;
 	assign Mem_WrEn = rMem_WrEn;
 	
-	always@(posedge Clk)
+	always@(*)
 	begin
-		opcode <= Instr[31:26];
 		rInstr <= Instr;
-		rALU_Out <= ALU_Out;
+		opcode <= rInstr[31:26];
 	end
 	
 	initial begin rReset = 1'b1; end
 	
 	
-	always @(posedge Clk) 
+	always @(*) 
 	begin
 		case(opcode)
 			6'b100000: //alu functions
@@ -123,7 +120,7 @@ module control(
 				rRF_B_sel = 1;
 				rALU_Bin_sel = 0;
 				rALU_func = 1;
-				if (rALU_Out == 0)				
+				if (Zero)				
 					rPC_Sel = 1;
 				else
 					rPC_Sel = 0;
@@ -138,7 +135,7 @@ module control(
 				rRF_B_sel = 1;
 				rALU_Bin_sel = 0;
 				rALU_func = 1;
-				if (rALU_Out != 0)				
+				if (!Zero)				
 					rPC_Sel = 1;
 				else
 					rPC_Sel = 0;

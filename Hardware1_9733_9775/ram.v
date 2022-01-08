@@ -27,7 +27,7 @@ module ram(
     );
 
 	reg [31:0] RAM [1023:0];
-	always @(posedge clk)
+	always @(posedge clk) //posedge clk
 	begin
 		if(we)
 		RAM[addr] = din;

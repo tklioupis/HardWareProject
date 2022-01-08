@@ -5,7 +5,92 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="new" >"/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.v" Line 31: Redeclaration of ansi port <arg fmt="%s" index="1">PCout</arg> is not allowed
+<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">ROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">rom</arg>&apos;, is tied to its initial value.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ALU_MEM_Addr&lt;1:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ALU_MEM_Addr&lt;31:12&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Instr&lt;25:4&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram_res</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3212" delta="new" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">PC/res</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">memRom/Mram_ROM</arg>&gt; for implementation as read-only block RAM.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">memRom/Mram_ROM</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_RAM</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">PC/res_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ifstage</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">rMem_WrEn</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">control</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">rMem_WrEn</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">control</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 </messages>

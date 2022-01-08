@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: regfile.prj
@@ -166,8 +166,8 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  32x32-bit single-port Read Only RAM                   : 1
-# Registers                                            : 32
- 32-bit register                                       : 32
+# Registers                                            : 31
+ 32-bit register                                       : 31
 # Multiplexers                                         : 2
  32-bit 32-to-1 multiplexer                            : 2
 
@@ -177,38 +177,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <res_31> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_30> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_29> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_28> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_27> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_26> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_25> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_24> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_23> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_22> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_21> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_20> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_19> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_18> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_17> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_16> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_15> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_14> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_13> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_12> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_11> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_10> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_9> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_8> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_7> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_6> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_5> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_4> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_3> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_2> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_1> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <res_0> (without init value) has a constant value of 0 in block <reg0>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <decoder>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_res> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -230,8 +198,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  32x32-bit single-port distributed Read Only RAM       : 1
-# Registers                                            : 1024
- Flip-Flops                                            : 1024
+# Registers                                            : 992
+ Flip-Flops                                            : 992
 # Multiplexers                                         : 2
  32-bit 32-to-1 multiplexer                            : 2
 
@@ -241,41 +209,7 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 
-Optimizing unit <register> ...
-
 Optimizing unit <regfile> ...
-WARNING:Xst:1710 - FF/Latch <reg0/res_0> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_1> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_2> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_3> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_4> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_5> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_6> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_7> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_8> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_9> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_10> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_11> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_12> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_13> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_14> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_15> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_16> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_17> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_18> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_19> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_20> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_21> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_22> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_23> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_24> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_25> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_26> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_27> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_28> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_29> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_30> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg0/res_31> (without init value) has a constant value of 0 in block <regfile>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -311,9 +245,9 @@ Top Level Output File Name         : regfile.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 736
-#      GND                         : 1
-#      LUT6                        : 671
+# BELS                             : 735
+#      LUT5                        : 64
+#      LUT6                        : 607
 #      MUXF7                       : 64
 # FlipFlops/Latches                : 992
 #      FDE                         : 992
@@ -403,7 +337,7 @@ Offset:              4.680ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            31   1.222   1.642  Awr_3_IBUF (Awr_3_IBUF)
-     LUT6:I0->O           32   0.203   1.291  WrEn_WEd[8]_AND_9_o1 (WrEn_WEd[8]_AND_9_o)
+     LUT6:I0->O           32   0.203   1.291  WrEn_WEd[8]_AND_8_o1 (WrEn_WEd[8]_AND_8_o)
      FDE:CE                    0.322          reg8/res_0
     ----------------------------------------
     Total                      4.680ns (1.747ns logic, 2.933ns route)
@@ -461,14 +395,14 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.97 secs
  
 --> 
 
 
-Total memory usage is 485648 kilobytes
+Total memory usage is 485632 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   64 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

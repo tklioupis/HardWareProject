@@ -44,15 +44,17 @@ TABLE OF CONTENTS
 =========================================================================
 Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/control.v" into library work
 Parsing module <control>.
-ERROR:HDLCompiler:329 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/control.v" Line 37: Target <opcode> of concurrent assignment or output port connection should be a net type.
-ERROR:HDLCompiler:598 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/control.v" Line 21: Module <control> ignored due to previous errors.
-Verilog file /home/ise/Projects/HardWareProject/Hardware1_9733_9775/control.v ignored due to errors
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 7.91 secs
+ 
 --> 
 
 
-Total memory usage is 395908 kilobytes
+Total memory usage is 396000 kilobytes
 
-Number of errors   :    2 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

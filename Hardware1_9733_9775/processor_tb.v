@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   20:47:47 01/06/2022
+// Create Date:   12:35:57 01/08/2022
 // Design Name:   processor
 // Module Name:   /home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor_tb.v
 // Project Name:  Hardware1_9733_9775
@@ -30,12 +30,14 @@ module processor_tb;
 	// Outputs
 	wire [31:0] ALU_Out;
 	wire [31:0] MEM_Out;
+	wire [31:0] RFrd;
 
 	// Instantiate the Unit Under Test (UUT)
 	processor uut (
 		.Clk(Clk), 
 		.ALU_Out(ALU_Out), 
-		.MEM_Out(MEM_Out)
+		.MEM_Out(MEM_Out), 
+		.RFrd(RFrd)
 	);
 
 	initial begin
@@ -60,6 +62,70 @@ module processor_tb;
 		#100;
 		Clk = 1;
 		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+		Clk = 0;
+		#100;
+		Clk = 1;
+		#100;
+
+		// Wait 100 ns for global reset to finish
+        
+		// Add stimulus here
 
 	end
       

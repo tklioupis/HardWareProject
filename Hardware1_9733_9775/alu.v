@@ -19,13 +19,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module alu(
-    input [31:0] A,B,
+    input signed [31:0] A,B,
     input [3:0] Op,
-    output [31:0] Out,
+    output signed [31:0] Out,
     output Zero
     );
 	 
-	reg [31:0] Res;
+	reg signed [31:0] Res;
 	reg ze;
 	assign Zero = ze;
 	assign Out = Res;

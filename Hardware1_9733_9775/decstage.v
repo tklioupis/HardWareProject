@@ -28,11 +28,13 @@ module decstage(
     input Clk,
     output [31:0] Immed,
     output [31:0] RF_A,
-    output [31:0] RF_B
+    output [31:0] RF_B,
+	 output [31:0] RFrd
     );
 	 
 	 wire [4:0] mux0out;
 	 wire [31:0] mux1out; 
+	 assign RFrd = mux1out;
 	 reg [31:0] resIm; 
 	 wire [5:0] opcode ;
 	 reg [31:0] SiEx ;
@@ -55,4 +57,4 @@ module decstage(
 				  ((opcode == 111111) || (opcode == 000000) || (opcode == 000001)) ? (SiEx<<2) : ZeFi; 
 	end
 
-endmodule
+endmodule 

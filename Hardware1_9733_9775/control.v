@@ -91,7 +91,19 @@ module control(
 				rALU_func = 0;
 				rMem_WrEn = 0;
 			end
-			6'b001111: //lw
+			6'b000011: //lb same as lw, the difference is in the decstage
+			begin 
+				rPC_Sel = 0;
+				rPC_LdEn = 1;
+				rReset = 0;
+				rRF_WrEn = 1;
+				rRF_WrData_sel = 1;
+				rRF_B_sel = 1;
+				rALU_Bin_sel =1;
+				rALU_func = 4'd3;
+				rMem_WrEn = 0;
+			end
+			6'b011111: //sw
 			begin 
 				rPC_Sel = 0;
 				rPC_LdEn = 1;
@@ -192,11 +204,12 @@ module control(
 				rALU_Bin_sel =1;
 				rALU_func = 4'd3;
 				rMem_WrEn = 0;
-			end
-			
+			end			
 		endcase
 	end
 	
 
 endmodule
-
+//input [31:0] ALU_Out;
+//input [31:0] MEM_Out;
+//input [31:0] RF_B;

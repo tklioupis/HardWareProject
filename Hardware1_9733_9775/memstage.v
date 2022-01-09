@@ -26,6 +26,6 @@ module memstage(
     output [31:0] MEM_DataOut
     );
 	
-	 ram memRam (.clk(clk),.we(Mem_WrEn),.addr(ALU_MEM_Addr[11:2]),.din(MEM_DataIn),.dout(MEM_DataOut));
+	 ram memRam (.clk(clk),.we(Mem_WrEn),.addr(ALU_MEM_Addr[11:2]),.din(MEM_DataIn),.Dout(MEM_DataOut));
 	 
 endmodule

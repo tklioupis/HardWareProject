@@ -36,15 +36,23 @@ module decstage(
 	 wire [31:0] mux1out; 
 	 assign RFrd = mux1out;
 	 reg [31:0] resIm; 
+	 assign Immed = resIm;
+	 reg [31:0] rMEM_out;
+	 wire [31:0] wMEM_out;
+	 assign wMEM_out = rMEM_out;
+	 reg [31:0] rRF_B;
+	 wire [31:0] wRF_B;
+	 assign RF_B = rRF_B;
 	 wire [5:0] opcode ;
-	 reg [31:0] SiEx ;
-	 reg [31:0] ZeFi ;
 	 assign opcode = Instr[31:26];
-	 assign Immed = resIm;	 
+	 reg [31:0] SiEx ;
+	 reg [31:0] ZeFi ; 
+	 
+	 
 		
 	mux2to1_5bit mux0 (.Din0(Instr[15:11]), .Din1(Instr[20:16]), .Sel(RF_B_sel), .Dout(mux0out));
-	mux2to1 mux1 (.Din0(MEM_out), .Din1(ALU_out), .Sel(RF_WrData_sel), .Dout(mux1out));
-	regfile RF (.Ard1(Instr[25:21]), .Ard2(mux0out), .Awr(Instr[20:16]), .Din(mux1out), .WrEn(RF_WrEn), .Clk(Clk), .Dout1(RF_A), .Dout2(RF_B)); 
+	mux2to1 mux1 (.Din0(wMEM_out), .Din1(ALU_out), .Sel(RF_WrData_sel), .Dout(mux1out));
+	regfile RF (.Ard1(Instr[25:21]), .Ard2(mux0out), .Awr(Instr[20:16]), .Din(mux1out), .WrEn(RF_WrEn), .Clk(Clk), .Dout1(RF_A), .Dout2(wRF_B)); 
 	
 	always@(*)
 	begin
@@ -55,6 +63,8 @@ module decstage(
 		resIm = ((opcode == 111000) || (opcode == 110000) || (opcode == 000011) || (opcode == 000111) || (opcode == 001111) || (opcode == 011111))? SiEx :
 				  ((opcode == 110010) || (opcode == 110011)) ? ZeFi :
 				  ((opcode == 111111) || (opcode == 000000) || (opcode == 000001)) ? (SiEx<<2) : ZeFi; 
+		rMEM_out = (opcode ==000011) ? {24'd0,MEM_out[7:0]} : MEM_out;
+		rRF_B = (opcode == 000111) ? {24'd0,wRF_B[7:0]} : wRF_B;
 	end
 
 endmodule 

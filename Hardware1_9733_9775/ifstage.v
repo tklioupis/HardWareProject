@@ -37,8 +37,8 @@ module ifstage(
 	 
 	 always@(*)
 	 begin
-		 PCplus4 = PCout + 32'd4;
-		 adder = PC_Immed + PCplus4;
+		 PCplus4 <= PCout + 32'd4;
+		 adder <= PC_Immed + PCout + 32'd4;
 	 end
 	 
 	 rom memRom(.clk(Clk),.addr(PCout[11:2]),.dout(Instr));

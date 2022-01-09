@@ -5,14 +5,14 @@ Parameter TMPDIR set to /home/ise/Projects/HardWareProject/Hardware1_9733_9775/x
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to /home/ise/Projects/HardWareProject/Hardware1_9733_9775/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: ifstage.prj
@@ -50,18 +50,17 @@ Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/m
 Parsing module <mux2to1>.
 Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.v" into library work
 Parsing module <ifstage>.
-WARNING:HDLCompiler:751 - "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.v" Line 31: Redeclaration of ansi port PCout is not allowed
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.50 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.95 secs
  
 --> 
 
 
-Total memory usage is 396168 kilobytes
+Total memory usage is 396172 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

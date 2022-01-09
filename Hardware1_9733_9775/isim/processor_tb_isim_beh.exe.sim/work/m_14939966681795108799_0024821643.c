@@ -29,6 +29,7 @@ static unsigned int ng1[] = {4U, 0U};
 static void Always_38_0(char *t0)
 {
     char t6[8];
+    char t8[8];
     char *t1;
     char *t2;
     char *t3;
@@ -60,17 +61,19 @@ LAB5:    xsi_set_current_line(40, ng0);
     memset(t6, 0, 8);
     xsi_vlog_unsigned_add(t6, 32, t5, 32, t4, 32);
     t7 = (t0 + 2568);
-    xsi_vlogvar_assign_value(t7, t6, 0, 0, 32);
+    xsi_vlogvar_wait_assign_value(t7, t6, 0, 0, 32, 0LL);
     xsi_set_current_line(41, ng0);
     t2 = (t0 + 1048U);
     t3 = *((char **)t2);
-    t2 = (t0 + 2568);
-    t4 = (t2 + 56U);
-    t5 = *((char **)t4);
+    t2 = (t0 + 2168U);
+    t4 = *((char **)t2);
     memset(t6, 0, 8);
-    xsi_vlog_unsigned_add(t6, 32, t3, 32, t5, 32);
-    t7 = (t0 + 2728);
-    xsi_vlogvar_assign_value(t7, t6, 0, 0, 32);
+    xsi_vlog_unsigned_add(t6, 32, t3, 32, t4, 32);
+    t2 = ((char*)((ng1)));
+    memset(t8, 0, 8);
+    xsi_vlog_unsigned_add(t8, 32, t6, 32, t2, 32);
+    t5 = (t0 + 2728);
+    xsi_vlogvar_wait_assign_value(t5, t8, 0, 0, 32, 0LL);
     goto LAB2;
 
 }

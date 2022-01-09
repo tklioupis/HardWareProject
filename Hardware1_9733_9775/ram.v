@@ -23,9 +23,10 @@ module ram(
 	input we, 
 	input [9:0] addr, 
 	input [31:0] din, 
-	output reg [31:0] dout
+	output[31:0] Dout
     );
-
+	reg [31:0] dout;
+	assign Dout = dout;
 	reg [31:0] RAM [1023:0];
 	always @(posedge clk) //posedge clk
 	begin

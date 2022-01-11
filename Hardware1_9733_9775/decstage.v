@@ -26,6 +26,7 @@ module decstage(
     input RF_WrData_sel,
     input RF_B_sel,
     input Clk,
+	 input lb_MEM_trim,
     output [31:0] Immed,
     output [31:0] RF_A,
     output [31:0] RF_B,
@@ -48,7 +49,7 @@ module decstage(
 	 reg [31:0] SiEx ;
 	 reg [31:0] shiftSiEx;
 	 reg [31:0] ZeFi ; 
-//	 reg [31:0] newMEM_out;
+
 	 
 	 
 		
@@ -63,12 +64,10 @@ module decstage(
 		shiftSiEx = SiEx<<2;
 		ZeFi [15:0] = Instr[15:0];
 		ZeFi [31:16] = 16'b0; 
-//		newMEM_out[7:0] = {MEM_out[7:0]};
-//		newMEM_out[31:8] = {24'd0};
 		resIm = ((opcode == 6'b111000) || (opcode == 6'b110000) || (opcode == 6'b000011) || (opcode == 6'b000111) || (opcode == 6'b001111) || (opcode == 6'b011111))? SiEx :
 				  ((opcode == 6'b110010) || (opcode == 6'b110011)) ? ZeFi :
 				  ((opcode == 6'b111111) || (opcode == 6'b000000) || (opcode == 6'b000001)) ? shiftSiEx : ZeFi; 
-		rMEM_out = (opcode == 6'b000011) ? {24'd0,MEM_out[7:0]} : MEM_out;
+		rMEM_out = (lb_MEM_trim) ? {24'd0,MEM_out[7:0]} : MEM_out;
 		rRF_B = (opcode == 6'b000111) ? {24'd0,wRF_B[7:0]} : wRF_B;
 	end
 

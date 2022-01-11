@@ -30,7 +30,8 @@ module control(
    output RF_B_sel,
    output ALU_Bin_sel,
    output [3:0] ALU_func,
-   output Mem_WrEn
+   output Mem_WrEn,
+	output lb_MEM_trim	
     );
 	 
 	reg [31:0] rInstr;
@@ -44,6 +45,7 @@ module control(
    reg rALU_Bin_sel;
 	reg [3:0] rALU_func;
    reg rMem_WrEn;
+	reg rlb_MEM_trim;
 		
 	assign PC_Sel = rPC_Sel;
 	assign PC_LdEn = rPC_LdEn;
@@ -54,6 +56,7 @@ module control(
 	assign ALU_Bin_sel = rALU_Bin_sel;
 	assign ALU_func = rALU_func;
 	assign Mem_WrEn = rMem_WrEn;
+	assign lb_MEM_trim = rlb_MEM_trim;
 	
 	always@(*)
 	begin
@@ -78,6 +81,7 @@ module control(
 				rALU_Bin_sel =0;
 				rALU_func = rInstr[3:0];
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 0;
 			end
 			6'b001111: //lw
 			begin 
@@ -90,6 +94,7 @@ module control(
 				rALU_Bin_sel = 1;
 				rALU_func = 0;
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 0;
 			end
 			6'b000011: //lb same as lw, the difference is in the decstage
 			begin 
@@ -102,6 +107,7 @@ module control(
 				rALU_Bin_sel =1;
 				rALU_func = 4'd3;
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 1;
 			end
 			6'b011111: //sw
 			begin 
@@ -114,6 +120,7 @@ module control(
 				rALU_Bin_sel = 1;
 				rALU_func = 0;
 				rMem_WrEn = 1;
+				rlb_MEM_trim = 0;
 			end
 			6'b111111: //b
 			begin 
@@ -126,6 +133,7 @@ module control(
 				rALU_Bin_sel = 0;
 				rALU_func = 0;
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 0;
 			end
 			6'b000000: //beq
 			begin 
@@ -141,6 +149,7 @@ module control(
 				rRF_WrEn = 0;
 				rRF_WrData_sel = 0;
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 0;
 			end
 			6'b000001: //bne
 			begin 
@@ -156,6 +165,7 @@ module control(
 				rRF_WrEn = 0;
 				rRF_WrData_sel = 0;
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 0;
 			end
 			6'b111000: //li
 			begin 
@@ -168,6 +178,7 @@ module control(
 				rALU_Bin_sel =1;
 				rALU_func = 0;
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 0;
 			end
 			6'b110000: //addi
 			begin 
@@ -180,6 +191,7 @@ module control(
 				rALU_Bin_sel =1;
 				rALU_func = 0;
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 0;
 			end
 			6'b110010: //andi
 			begin 
@@ -192,6 +204,7 @@ module control(
 				rALU_Bin_sel =1;
 				rALU_func = 4'd2;
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 0;
 			end
 			6'b110011: //ori
 			begin 
@@ -204,6 +217,7 @@ module control(
 				rALU_Bin_sel =1;
 				rALU_func = 4'd3;
 				rMem_WrEn = 0;
+				rlb_MEM_trim = 0;
 			end			
 		endcase
 	end

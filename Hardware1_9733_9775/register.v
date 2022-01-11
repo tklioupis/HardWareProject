@@ -18,7 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module register(input [31:0] Data, input CLK, input WE, output [31:0] Dout);
+module register(
+		input signed [31:0] Data, 
+		input CLK, 
+		input WE, 
+		output signed [31:0] Dout
+		);
 	reg [31:0] res;
 	assign Dout = res;
 	always @(posedge CLK) 

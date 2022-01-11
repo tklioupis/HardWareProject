@@ -22,8 +22,8 @@ module ram(
 	input clk, 
 	input we, 
 	input [9:0] addr, 
-	input [31:0] din, 
-	output[31:0] Dout
+	input signed [31:0] din, 
+	output signed [31:0] Dout
     );
 	reg [31:0] dout;
 	assign Dout = dout;

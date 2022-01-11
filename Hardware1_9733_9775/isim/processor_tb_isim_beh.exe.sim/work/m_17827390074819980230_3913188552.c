@@ -25,7 +25,7 @@ static const char *ng0 = "/home/ise/Projects/HardWareProject/Hardware1_9733_9775
 
 
 
-static void Cont_23_0(char *t0)
+static void Cont_28_0(char *t0)
 {
     char *t1;
     char *t2;
@@ -45,7 +45,7 @@ LAB0:    t1 = (t0 + 2840U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(23, ng0);
+LAB2:    xsi_set_current_line(28, ng0);
     t2 = (t0 + 1928);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
@@ -62,7 +62,7 @@ LAB2:    xsi_set_current_line(23, ng0);
 LAB1:    return;
 }
 
-static void Always_24_1(char *t0)
+static void Always_29_1(char *t0)
 {
     char *t1;
     char *t2;
@@ -84,7 +84,7 @@ LAB0:    t1 = (t0 + 3088U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(24, ng0);
+LAB2:    xsi_set_current_line(29, ng0);
     t2 = (t0 + 3424);
     *((int *)t2) = 1;
     t3 = (t0 + 3120);
@@ -92,9 +92,9 @@ LAB2:    xsi_set_current_line(24, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(25, ng0);
+LAB4:    xsi_set_current_line(30, ng0);
 
-LAB5:    xsi_set_current_line(26, ng0);
+LAB5:    xsi_set_current_line(31, ng0);
     t4 = (t0 + 1368U);
     t5 = *((char **)t4);
     t4 = (t5 + 4);
@@ -109,7 +109,7 @@ LAB5:    xsi_set_current_line(26, ng0);
 LAB7:
 LAB8:    goto LAB2;
 
-LAB6:    xsi_set_current_line(27, ng0);
+LAB6:    xsi_set_current_line(32, ng0);
     t11 = (t0 + 1048U);
     t12 = *((char **)t11);
     t11 = (t0 + 1928);
@@ -121,7 +121,7 @@ LAB6:    xsi_set_current_line(27, ng0);
 
 extern void work_m_17827390074819980230_3913188552_init()
 {
-	static char *pe[] = {(void *)Cont_23_0,(void *)Always_24_1};
+	static char *pe[] = {(void *)Cont_28_0,(void *)Always_29_1};
 	xsi_register_didat("work_m_17827390074819980230_3913188552", "isim/processor_tb_isim_beh.exe.sim/work/m_17827390074819980230_3913188552.didat");
 	xsi_register_executes(pe);
 }

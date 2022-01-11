@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   15:05:50 01/01/2022
+// Create Date:   10:56:52 01/11/2022
 // Design Name:   alu
 // Module Name:   /home/ise/Projects/HardWareProject/Hardware1_9733_9775/alu_tb.v
 // Project Name:  Hardware1_9733_9775
@@ -44,9 +44,11 @@ module alu_tb;
 
 	initial begin
 		// Initialize Inputs
+		// Initialize Inputs
 		//{A,B,Op} = {32'h0000000F,32'h0000000A,4'h2}; #100;
-		{A,B,Op} = {32'd1,32'd2,4'd2}; #100;
-		{A,B,Op} = {32'd11,32'd20,4'd2}; #100;
+		//{A,B,Op} = {32'd1,32'd2,4'd2}; #100;
+		//{A,B,Op} = {32'd11,32'd20,4'd2}; #100;
+		{A,B,Op} = {32'd3,-32'd1,4'd1}; #100;
         
 		// Add stimulus here
 

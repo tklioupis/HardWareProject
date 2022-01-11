@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module mux2to1(
-    input [31:0] Din0,
-    input [31:0] Din1,
+    input signed [31:0] Din0,
+    input signed [31:0] Din1,
     input Sel,
-    output [31:0] Dout
+    output signed [31:0] Dout
     );
 	 
 	reg [31:0] res;

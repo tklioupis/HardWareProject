@@ -97,7 +97,7 @@ module control(
 				rPC_LdEn = 1;
 				rReset = 0;
 				rRF_WrEn = 1;
-				rRF_WrData_sel = 1;
+				rRF_WrData_sel = 0;
 				rRF_B_sel = 1;
 				rALU_Bin_sel =1;
 				rALU_func = 4'd3;
@@ -132,7 +132,7 @@ module control(
 				rRF_B_sel = 1;
 				rALU_Bin_sel = 0;
 				rALU_func = 1;
-				if (Zero)				
+				if (Zero == 1'b1)				
 					rPC_Sel = 1;
 				else
 					rPC_Sel = 0;
@@ -142,12 +142,12 @@ module control(
 				rRF_WrData_sel = 0;
 				rMem_WrEn = 0;
 			end
-			6'b000000: //bnq
+			6'b000001: //bne
 			begin 
 				rRF_B_sel = 1;
 				rALU_Bin_sel = 0;
 				rALU_func = 1;
-				if (!Zero)				
+				if (Zero == 1'b0)				
 					rPC_Sel = 1;
 				else
 					rPC_Sel = 0;
@@ -193,7 +193,7 @@ module control(
 				rALU_func = 4'd2;
 				rMem_WrEn = 0;
 			end
-			6'b110010: //ori
+			6'b110011: //ori
 			begin 
 				rPC_Sel = 0;
 				rPC_LdEn = 1;
@@ -210,6 +210,4 @@ module control(
 	
 
 endmodule
-//input [31:0] ALU_Out;
-//input [31:0] MEM_Out;
-//input [31:0] RF_B;
+

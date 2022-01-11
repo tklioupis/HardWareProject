@@ -50,11 +50,11 @@ module alu(
 			Res = A<<1;
 		4'b1100://rotate left
 			Res = {A[30:0],A[31]};	
-		4'b1100://rotate right
+		4'b1101://rotate right
 			Res = {A[0], A[31:1]};	
 		default: Res = A + B;
 		endcase
-		ze = (Out == 32'd0) ? 1'b1 : 1'b0;
+		ze = (Res == 32'd0) ? 1'b1 : 1'b0;
 	end
 endmodule
 	 

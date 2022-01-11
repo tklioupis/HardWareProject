@@ -22,9 +22,9 @@ module regfile(
     input [4:0] Ard1,
     input [4:0] Ard2,
     input [4:0] Awr,
-    output [31:0] Dout1,
-    output [31:0] Dout2,
-    input [31:0] Din,
+    output signed [31:0] Dout1,
+    output signed [31:0] Dout2,
+    input signed [31:0] Din,
     input WrEn,
     input Clk
     );

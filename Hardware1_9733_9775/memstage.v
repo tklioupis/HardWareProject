@@ -22,8 +22,8 @@ module memstage(
     input clk,
     input Mem_WrEn,
     input [31:0] ALU_MEM_Addr,
-    input [31:0] MEM_DataIn,
-    output [31:0] MEM_DataOut
+    input signed [31:0] MEM_DataIn,
+    output signed [31:0] MEM_DataOut
     );
 	
 	 ram memRam (.clk(clk),.we(Mem_WrEn),.addr(ALU_MEM_Addr[11:2]),.din(MEM_DataIn),.Dout(MEM_DataOut));

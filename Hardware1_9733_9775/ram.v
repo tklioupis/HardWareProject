@@ -28,7 +28,7 @@ module ram(
 	reg [31:0] dout;
 	assign Dout = dout;
 	reg [31:0] RAM [1023:0];
-	always @(posedge clk) //posedge clk
+	always @(negedge clk) 
 	begin
 		if(we)
 		RAM[addr] = din;

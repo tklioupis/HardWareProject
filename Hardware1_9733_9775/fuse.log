@@ -1,31 +1,31 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor_tb_isim_beh.exe -prj /home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor_tb_beh.prj work.processor_tb work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/temp/HardWareProject/Hardware1_9733_9775/processor_tb_isim_beh.exe" -prj "/home/ise/temp/HardWareProject/Hardware1_9733_9775/processor_tb_beh.prj" "work.processor_tb" "work.glbl" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/register.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux32to1.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decoder.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/rom.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/regfile.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ram.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/PCregister.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux2to1_5bit.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/mux2to1.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/alu.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/memstage.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ifstage.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/decstage.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/alustage.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/datapath.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/control.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.v" into library work
-Analyzing Verilog file "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor_tb.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/register.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux32to1.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decoder.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/rom.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/regfile.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/ram.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/PCregister.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux2to1_5bit.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/mux2to1.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/alu.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/memstage.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/ifstage.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/decstage.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/alustage.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/datapath.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/control.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/processor.v" into library work
+Analyzing Verilog file "/home/ise/temp/HardWareProject/Hardware1_9733_9775/processor_tb.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 95192 KB
-Fuse CPU Usage: 1150 ms
+Fuse Memory Usage: 95188 KB
+Fuse CPU Usage: 1540 ms
 Compiling module mux2to1
 Compiling module PCregister
 Compiling module rom
@@ -47,7 +47,7 @@ Compiling module processor_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 19 Verilog Units
-Built simulation executable /home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor_tb_isim_beh.exe
+Built simulation executable /home/ise/temp/HardWareProject/Hardware1_9733_9775/processor_tb_isim_beh.exe
 Fuse Memory Usage: 98708 KB
-Fuse CPU Usage: 1310 ms
-GCC CPU Usage: 1320 ms
+Fuse CPU Usage: 1760 ms
+GCC CPU Usage: 430 ms

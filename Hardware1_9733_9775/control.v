@@ -104,12 +104,25 @@ module control(
 				rRF_WrEn = 1;
 				rRF_WrData_sel = 0;
 				rRF_B_sel = 1;
-				rALU_Bin_sel =1;
-				rALU_func = 4'd3;
+				rALU_Bin_sel = 1;
+				rALU_func = 0;
 				rMem_WrEn = 0;
 				rlb_MEM_trim = 1;
 			end
 			6'b011111: //sw
+			begin 
+				rPC_Sel = 0;
+				rPC_LdEn = 1;
+				rReset = 0;
+				rRF_WrEn = 0;
+				rRF_WrData_sel = 0;
+				rRF_B_sel = 1;
+				rALU_Bin_sel = 1;
+				rALU_func = 0;
+				rMem_WrEn = 1;
+				rlb_MEM_trim = 0;
+			end
+			6'b000111: //sb same as sw, the difference is in the decstage
 			begin 
 				rPC_Sel = 0;
 				rPC_LdEn = 1;

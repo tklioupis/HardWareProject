@@ -202,6 +202,7 @@ module processor_tb;
 		#100;
 		Clk = 0;
 		#100;
+		
 
 		// Wait 100 ns for global reset to finish
 		        

@@ -3,14 +3,14 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/ise/temp/HardWareProject/Hardware1_9733_9775/processor_tb_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor_tb_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="processor_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="6" />
    <wvobject fp_name="/processor_tb/ALU_Out" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ALU_Out[31:0]</obj_property>
       <obj_property name="ObjectShortName">ALU_Out[31:0]</obj_property>
@@ -27,16 +27,12 @@
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/processor_tb/uut/datap/ifs/Instr" type="array" db_ref_id="1">
+   <wvobject fp_name="/processor_tb/uut/datap/decs/Instr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">Instr[31:0]</obj_property>
       <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/processor_tb/uut/datap/decs/opcode" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">opcode[5:0]</obj_property>
-      <obj_property name="ObjectShortName">opcode[5:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/processor_tb/uut/ctrl/lb_MEM_trim" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">lb_MEM_trim</obj_property>
-      <obj_property name="ObjectShortName">lb_MEM_trim</obj_property>
+   <wvobject fp_name="/processor_tb/uut/datap/decs/RF_WrEn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RF_WrEn</obj_property>
+      <obj_property name="ObjectShortName">RF_WrEn</obj_property>
    </wvobject>
 </wave_config>

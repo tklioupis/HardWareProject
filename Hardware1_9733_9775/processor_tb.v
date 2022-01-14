@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   10:37:37 01/11/2022
+// Create Date:   12:16:20 01/14/2022
 // Design Name:   processor
 // Module Name:   /home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor_tb.v
 // Project Name:  Hardware1_9733_9775
@@ -25,7 +25,7 @@
 module processor_tb;
 
 	// Inputs
-	reg Clk;
+	reg Reset;
 
 	// Outputs
 	wire [31:0] ALU_Out;
@@ -34,7 +34,7 @@ module processor_tb;
 
 	// Instantiate the Unit Under Test (UUT)
 	processor uut (
-		.Clk(Clk), 
+		.Reset(Reset), 
 		.ALU_Out(ALU_Out), 
 		.MEM_Out(MEM_Out), 
 		.RFrd(RFrd)
@@ -42,170 +42,18 @@ module processor_tb;
 
 	initial begin
 		// Initialize Inputs
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		Clk = 1;
-		#100;
-		Clk = 0;
-		#100;
-		
+		Reset = 1'b1;
+		#40;
+		Reset = 1'b0;
+		#2000;
+		Reset = 1'b1;
+		#40;
+		Reset = 1'b0;
+			
 
 		// Wait 100 ns for global reset to finish
-		        
+	
+        
 		// Add stimulus here
 
 	end

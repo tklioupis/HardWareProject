@@ -780,13 +780,13 @@ ctrl/_n0154    |         |         |   11.227|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 20.75 secs
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 22.60 secs
  
 --> 
 
 
-Total memory usage is 490780 kilobytes
+Total memory usage is 490864 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   15 (   0 filtered)

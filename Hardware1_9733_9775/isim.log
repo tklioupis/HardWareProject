@@ -14,8 +14,11 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
+# run 4000ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
 # restart
-# run 10000ns
+# run 4000ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 ISim P.20131013 (signature 0xfbc00daa)
@@ -29,7 +32,7 @@ This is a Full version of ISim.
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 10000ns
+# run 4000ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # exit 0

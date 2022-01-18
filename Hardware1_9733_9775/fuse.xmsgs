@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="Simulator" num="992" delta="unknown" >&quot;<arg fmt="%s" index="1">/home/ise/Projects/HardWareProject/Hardware1_9733_9775/ram.v</arg>&quot; Line <arg fmt="%d" index="2">37</arg>. <arg fmt="%s" index="3">writememb</arg> system task is not supported
-</msg>
-
 </messages>
 

@@ -161,9 +161,9 @@ module control(
 				rRF_WrEn = 1;
 				rRF_WrData_sel = 1;
 				rRF_B_sel = 1;
-				rALU_Bin_sel =1;
+				rALU_Bin_sel = 1;
 				rALU_func = 0;
-				rMem_WrEn = 0;;
+				rMem_WrEn = 0;
 			end
 			6'b110000: //addi
 			begin 
@@ -172,7 +172,7 @@ module control(
 				rRF_WrEn = 1;
 				rRF_WrData_sel = 1;
 				rRF_B_sel = 1;
-				rALU_Bin_sel =1;
+				rALU_Bin_sel = 1;
 				rALU_func = 0;
 				rMem_WrEn = 0;
 			end
@@ -183,7 +183,7 @@ module control(
 				rRF_WrEn = 1;
 				rRF_WrData_sel = 1;
 				rRF_B_sel = 1;
-				rALU_Bin_sel =1;
+				rALU_Bin_sel = 1;
 				rALU_func = 4'd2;
 				rMem_WrEn = 0;
 			end
@@ -194,7 +194,7 @@ module control(
 				rRF_WrEn = 1;
 				rRF_WrData_sel = 1;
 				rRF_B_sel = 1;
-				rALU_Bin_sel =1;
+				rALU_Bin_sel = 1;
 				rALU_func = 4'd3;
 				rMem_WrEn = 0;
 			end			

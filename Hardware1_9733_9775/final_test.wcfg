@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="7" />
    <wvobject fp_name="/processor_tb/ALU_Out" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ALU_Out[31:0]</obj_property>
       <obj_property name="ObjectShortName">ALU_Out[31:0]</obj_property>
@@ -23,16 +23,20 @@
       <obj_property name="ElementShortName">RFrd[31:0]</obj_property>
       <obj_property name="ObjectShortName">RFrd[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/processor_tb/Clk" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">Clk</obj_property>
-      <obj_property name="ObjectShortName">Clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/processor_tb/uut/datap/decs/Instr" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">Instr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/processor_tb/uut/datap/decs/RF_WrEn" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">RF_WrEn</obj_property>
       <obj_property name="ObjectShortName">RF_WrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_tb/uut/datap/ifs/Instr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Instr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_tb/uut/datap/ifs/PC/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_tb/Reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
    </wvobject>
 </wave_config>

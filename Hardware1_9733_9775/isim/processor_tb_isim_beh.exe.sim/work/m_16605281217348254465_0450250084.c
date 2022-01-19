@@ -140,7 +140,7 @@ LAB7:    xsi_set_current_line(36, ng0);
     t19 = *((char **)t18);
     xsi_vlog_generic_get_array_select_value(t13, 32, t4, t12, t17, 2, 1, t19, 10, 2);
     t18 = (t0 + 2088);
-    xsi_vlogvar_assign_value(t18, t13, 0, 0, 32);
+    xsi_vlogvar_wait_assign_value(t18, t13, 0, 0, 32, 0LL);
 
 LAB8:    goto LAB2;
 
@@ -173,7 +173,7 @@ LAB9:    t29 = *((unsigned int *)t13);
     t30 = *((unsigned int *)t14);
     t31 = (t29 - t30);
     t32 = (t31 + 1);
-    xsi_vlogvar_assign_value(t11, t12, 0, *((unsigned int *)t14), t32);
+    xsi_vlogvar_wait_assign_value(t11, t12, 0, *((unsigned int *)t14), t32, 0LL);
     goto LAB10;
 
 }

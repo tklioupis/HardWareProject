@@ -31,9 +31,9 @@ module ram(
 	always @(negedge clk) 
 	begin
 		if(we)
-			RAM[addr] = din;
+			RAM[addr] <= din;
 		else
-			dout = RAM[addr];
+			dout <= RAM[addr];
 	end
 	
 	

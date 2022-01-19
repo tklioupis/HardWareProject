@@ -44,3 +44,6 @@ xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/p
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.syr" 
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.syr" 
 xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.xst" -ofn "/home/ise/Projects/HardWareProject/Hardware1_9733_9775/processor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45t-fgg484-3 processor.ngc processor.ngd  
+map -intstyle ise -p xc6slx45t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o processor_map.ncd processor.ngd processor.pcf 

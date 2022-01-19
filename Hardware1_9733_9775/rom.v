@@ -29,7 +29,7 @@ module rom(
 	begin
 		$readmemb("rom3.data", ROM);
 	end
-	always @(*) //posedge clk
+	always @(*)
 	begin
 		dout <= ROM[addr];
 	end

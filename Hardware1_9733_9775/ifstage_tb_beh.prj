@@ -1,6 +1,0 @@
-verilog work "rom.v"
-verilog work "PCregister.v"
-verilog work "mux2to1.v"
-verilog work "ifstage.v"
-verilog work "ifstage_tb.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

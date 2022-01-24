@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="8" />
    <wvobject fp_name="/processor_tb/ALU_Out" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ALU_Out[31:0]</obj_property>
       <obj_property name="ObjectShortName">ALU_Out[31:0]</obj_property>
@@ -38,5 +38,10 @@
    <wvobject fp_name="/processor_tb/Reset" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">Reset</obj_property>
       <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_tb/uut/datap/ifs/PC/Dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Dout[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
